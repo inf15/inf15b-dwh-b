@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema>
+    <column comment="" default="" key="false" label="VNr" length="1000"
+        nullable="true" originalDbColumnName="VNr" originalLength="0"
+        pattern="" precision="-1" talendType="id_String" type="VARCHAR"/>
+    <column comment="" default="" key="false" label="KuNr" length="1000"
+        nullable="true" originalDbColumnName="KuNr" originalLength="0"
+        pattern="" precision="-1" talendType="id_String" type="VARCHAR"/>
+    <column comment="" default="" key="false" label="Art" length="1000"
+        nullable="true" originalDbColumnName="Art" originalLength="0"
+        pattern="" precision="-1" talendType="id_String" type="VARCHAR"/>
+    <column comment="" default="" key="false" label="V_Wert"
+        length="1000" nullable="true" originalDbColumnName="V_Wert"
+        originalLength="0" pattern="" precision="-1"
+        talendType="id_String" type="VARCHAR"/>
+    <column comment="" default="" key="false" label="VBeginn"
+        length="1000" nullable="true" originalDbColumnName="VBeginn"
+        originalLength="0" pattern="" precision="-1"
+        talendType="id_String" type="VARCHAR"/>
+    <column comment="" default="" key="false" label="Laufzeit"
+        length="1000" nullable="true" originalDbColumnName="Laufzeit"
+        originalLength="1000" pattern="" precision="-1"
+        talendType="id_String" type=""/>
+    <column comment="" default="" key="false" label="K_Frist"
+        length="1000" nullable="true" originalDbColumnName="K_Frist"
+        originalLength="1000" pattern="" precision="-1"
+        talendType="id_String" type=""/>
+    <column comment="" default="" key="false" label="Rate_pro_Monat"
+        length="1000" nullable="true"
+        originalDbColumnName="Rate_pro_Monat" originalLength="0"
+        pattern="" precision="-1" talendType="id_String" type="VARCHAR"/>
+    <column comment="" default="" key="false" label="Rate_pro_Quartal"
+        length="1000" nullable="true"
+        originalDbColumnName="Rate_pro_Quartal" originalLength="1000"
+        pattern="" precision="-1" talendType="id_String" type="VARCHAR"/>
+    <column comment="" default="" key="false" label="Rate_pro_Halbjahr"
+        length="1000" nullable="true"
+        originalDbColumnName="Rate_pro_Halbjahr" originalLength="1000"
+        pattern="" precision="-1" talendType="id_String" type="VARCHAR"/>
+    <column comment="" default="" key="false" label="Rate_pro_Jahr"
+        length="1000" nullable="true"
+        originalDbColumnName="Rate_pro_Jahr" originalLength="1000"
+        pattern="" precision="-1" talendType="id_String" type="VARCHAR"/>
+    <column comment="" default="" key="false" label="Zahlungsweise"
+        length="1000" nullable="true"
+        originalDbColumnName="Zahlungsweise" originalLength="1000"
+        pattern="" precision="-1" talendType="id_String" type="VARCHAR"/>
+</schema>

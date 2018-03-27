@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema dbmsId="mysql_id">
+    <column comment="" default="" key="false" label="KuNr" length="1000"
+        nullable="true" originalDbColumnName="KuNr" originalLength="0"
+        pattern="" precision="-1" talendType="id_String" type="VARCHAR"/>
+    <column comment="" default="" key="false" label="Name" length="1000"
+        nullable="true" originalDbColumnName="Name" originalLength="0"
+        pattern="" precision="-1" talendType="id_String" type="VARCHAR"/>
+    <column comment="" default="" key="false" label="Vorname1"
+        length="1000" nullable="true" originalDbColumnName="Vorname1"
+        originalLength="0" pattern="" precision="-1"
+        talendType="id_String" type="VARCHAR"/>
+    <column comment="" default="" key="false" label="Vorname2"
+        length="1000" nullable="true" originalDbColumnName="Vorname2"
+        originalLength="0" pattern="" precision="-1"
+        talendType="id_String" type="VARCHAR"/>
+    <column comment="" default="" key="false" label="Geb_Datum"
+        length="1000" nullable="true" originalDbColumnName="Geb_Datum"
+        originalLength="1000" pattern="" precision="-1"
+        talendType="id_String" type="VARCHAR"/>
+    <column comment="" default="" key="false" label="Geb_Ort"
+        length="1000" nullable="true" originalDbColumnName="Geb_Ort"
+        originalLength="0" pattern="" precision="-1"
+        talendType="id_String" type="VARCHAR"/>
+    <column comment="" default="" key="false" label="Strasse"
+        length="1000" nullable="true" originalDbColumnName="Strasse"
+        originalLength="1000" pattern="" precision="-1"
+        talendType="id_String" type="VARCHAR"/>
+    <column comment="" default="" key="false" label="HNr" length="1000"
+        nullable="true" originalDbColumnName="HNr" originalLength="1000"
+        pattern="" precision="-1" talendType="id_String" type="VARCHAR"/>
+    <column comment="" default="" key="false" label="PLZ" length="1000"
+        nullable="true" originalDbColumnName="PLZ" originalLength="1000"
+        pattern="" precision="-1" talendType="id_String" type="VARCHAR"/>
+    <column comment="" default="" key="false" label="Ort" length="1000"
+        nullable="true" originalDbColumnName="Ort" originalLength="1000"
+        pattern="" precision="-1" talendType="id_String" type="VARCHAR"/>
+    <column comment="" default="" key="false" label="Tel_priv"
+        length="1000" nullable="true" originalDbColumnName="Tel_priv"
+        originalLength="1000" pattern="" precision="-1"
+        talendType="id_String" type="VARCHAR"/>
+    <column comment="" default="" key="false" label="tel_arbeit"
+        length="1000" nullable="true" originalDbColumnName="tel_arbeit"
+        originalLength="1000" pattern="" precision="-1"
+        talendType="id_String" type="VARCHAR"/>
+    <column comment="" default="" key="false" label="Mobil"
+        length="1000" nullable="true" originalDbColumnName="Mobil"
+        originalLength="1000" pattern="" precision="-1"
+        talendType="id_String" type="VARCHAR"/>
+    <column comment="" default="" key="false" label="Fax" length="1000"
+        nullable="true" originalDbColumnName="Fax" originalLength="1000"
+        pattern="" precision="-1" talendType="id_String" type="VARCHAR"/>
+    <column comment="" default="" key="false" label="eMail1"
+        length="1000" nullable="true" originalDbColumnName="eMail1"
+        originalLength="1000" pattern="" precision="-1"
+        talendType="id_String" type="VARCHAR"/>
+    <column comment="" default="" key="false" label="eMail2"
+        length="1000" nullable="true" originalDbColumnName="eMail2"
+        originalLength="1000" pattern="" precision="-1"
+        talendType="id_String" type="VARCHAR"/>
+    <column comment="" default="" key="false" label="Prio_Kontakt"
+        length="1000" nullable="true"
+        originalDbColumnName="Prio_Kontakt" originalLength="1000"
+        pattern="" precision="-1" talendType="id_String" type="VARCHAR"/>
+    <column comment="" default="" key="false" label="FamStand"
+        length="1000" nullable="true" originalDbColumnName="FamStand"
+        originalLength="1000" pattern="" precision="-1"
+        talendType="id_String" type="VARCHAR"/>
+    <column comment="" default="" key="false" label="Anz_Kinder"
+        length="1000" nullable="true" originalDbColumnName="Anz_Kinder"
+        originalLength="1000" pattern="" precision="-1"
+        talendType="id_String" type="VARCHAR"/>
+    <column comment="" default="" key="false" label="Anz_Kinder_MV"
+        length="1000" nullable="true"
+        originalDbColumnName="Anz_Kinder_MV" originalLength="1000"
+        pattern="" precision="-1" talendType="id_String" type="VARCHAR"/>
+    <column comment="" default="" key="false" label="Ehepart_MV"
+        length="1000" nullable="true" originalDbColumnName="Ehepart_MV"
+        originalLength="1000" pattern="" precision="-1"
+        talendType="id_String" type="VARCHAR"/>
+</schema>
