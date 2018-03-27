@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema dbmsId="mysql_id">
+    <column comment="" default="" key="false" label="VNr" length="100"
+        nullable="true" originalDbColumnName="VNr" originalLength="0"
+        pattern="" precision="-1" talendType="id_String" type="VARCHAR"/>
+    <column comment="" default="" key="false" label="KuNr" length="100"
+        nullable="true" originalDbColumnName="KuNr" originalLength="0"
+        pattern="" precision="-1" talendType="id_String" type="VARCHAR"/>
+    <column comment="" default="" key="false" label="Wertbetrag"
+        length="100" nullable="true" originalDbColumnName="Wertbetrag"
+        originalLength="0" pattern="" precision="-1"
+        talendType="id_String" type="VARCHAR"/>
+    <column comment="" default="" key="false" label="Rate_pro_Monat"
+        length="100" nullable="true"
+        originalDbColumnName="Rate_pro_Monat" originalLength="0"
+        pattern="" precision="-1" talendType="id_String" type="VARCHAR"/>
+    <column comment="" default="" key="false" label="Rate_pro_Quartal"
+        length="100" nullable="true"
+        originalDbColumnName="Rate_pro_Quartal" originalLength="0"
+        pattern="" precision="-1" talendType="id_String" type="VARCHAR"/>
+    <column comment="" default="" key="false" label="Rate_pro_Halbjahr"
+        length="100" nullable="true"
+        originalDbColumnName="Rate_pro_Halbjahr" originalLength="0"
+        pattern="" precision="-1" talendType="id_String" type="VARCHAR"/>
+    <column comment="" default="" key="false" label="Rate_pro_Jahr"
+        length="100" nullable="true"
+        originalDbColumnName="Rate_pro_Jahr" originalLength="0"
+        pattern="" precision="-1" talendType="id_String" type="VARCHAR"/>
+    <column comment="" default="" key="false" label="Zahlungsweise"
+        length="100" nullable="true"
+        originalDbColumnName="Zahlungsweise" originalLength="0"
+        pattern="" precision="-1" talendType="id_String" type="VARCHAR"/>
+</schema>

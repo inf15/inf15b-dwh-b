@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema dbmsId="mysql_id">
+    <column comment="" default="" key="false" label="VNr" length="1000"
+        nullable="true" originalDbColumnName="VNr" originalLength="0"
+        pattern="" precision="-1" talendType="id_String" type="VARCHAR"/>
+    <column comment="" default="" key="false" label="KuNr" length="1000"
+        nullable="true" originalDbColumnName="KuNr" originalLength="0"
+        pattern="" precision="-1" talendType="id_String" type="VARCHAR"/>
+    <column comment="" default="" key="false" label="KFZ_KZ"
+        length="1000" nullable="true" originalDbColumnName="KFZ_KZ"
+        originalLength="0" pattern="" precision="-1"
+        talendType="id_String" type="VARCHAR"/>
+    <column comment="" default="" key="false" label="Art" length="1000"
+        nullable="true" originalDbColumnName="Art" originalLength="0"
+        pattern="" precision="-1" talendType="id_String" type="VARCHAR"/>
+    <column comment="" default="" key="false" label="Neuwert"
+        length="1000" nullable="true" originalDbColumnName="Neuwert"
+        originalLength="0" pattern="" precision="-1"
+        talendType="id_String" type="VARCHAR"/>
+    <column comment="" default="" key="false" label="Erstzulassung"
+        length="1000" nullable="true"
+        originalDbColumnName="Erstzulassung" originalLength="0"
+        pattern="" precision="-1" talendType="id_String" type="VARCHAR"/>
+    <column comment="" default="" key="false" label="VBeginn"
+        length="1000" nullable="true" originalDbColumnName="VBeginn"
+        originalLength="0" pattern="" precision="-1"
+        talendType="id_String" type="VARCHAR"/>
+    <column comment="" default="" key="false" label="HP_pro_Monat"
+        length="1000" nullable="true"
+        originalDbColumnName="HP_pro_Monat" originalLength="0"
+        pattern="" precision="-1" talendType="id_String" type="VARCHAR"/>
+    <column comment="" default="" key="false" label="TK_pro_Monat"
+        length="1000" nullable="true"
+        originalDbColumnName="TK_pro_Monat" originalLength="1000"
+        pattern="" precision="-1" talendType="id_String" type="VARCHAR"/>
+    <column comment="" default="" key="false" label="VK_pro_Monat"
+        length="1000" nullable="true"
+        originalDbColumnName="VK_pro_Monat" originalLength="1000"
+        pattern="" precision="-1" talendType="id_String" type="VARCHAR"/>
+    <column comment="" default="" key="false" label="HP_Satz"
+        length="1000" nullable="true" originalDbColumnName="HP_Satz"
+        originalLength="1000" pattern="" precision="-1"
+        talendType="id_String" type="VARCHAR"/>
+    <column comment="" default="" key="false" label="TK_Satz"
+        length="1000" nullable="true" originalDbColumnName="TK_Satz"
+        originalLength="1000" pattern="" precision="-1"
+        talendType="id_String" type="VARCHAR"/>
+    <column comment="" default="" key="false" label="VK_Satz"
+        length="1000" nullable="true" originalDbColumnName="VK_Satz"
+        originalLength="1000" pattern="" precision="-1"
+        talendType="id_String" type="VARCHAR"/>
+    <column comment="" default="" key="false" label="VK_J_pro_N"
+        length="1000" nullable="true" originalDbColumnName="VK_J_pro_N"
+        originalLength="1000" pattern="" precision="-1"
+        talendType="id_String" type="VARCHAR"/>
+    <column comment="" default="" key="false" label="SB_TK"
+        length="1000" nullable="true" originalDbColumnName="SB_TK"
+        originalLength="1000" pattern="" precision="-1"
+        talendType="id_String" type="VARCHAR"/>
+    <column comment="" default="" key="false" label="SBVK" length="1000"
+        nullable="true" originalDbColumnName="SBVK"
+        originalLength="1000" pattern="" precision="-1"
+        talendType="id_String" type="VARCHAR"/>
+    <column comment="" default="" key="false" label="Schadensumme_Sach"
+        length="1000" nullable="true"
+        originalDbColumnName="Schadensumme_Sach" originalLength="1000"
+        pattern="" precision="-1" talendType="id_String" type="VARCHAR"/>
+    <column comment="" default="" key="false"
+        label="Schadenssumme_Person" length="1000" nullable="true"
+        originalDbColumnName="Schadenssumme_Person"
+        originalLength="1000" pattern="" precision="-1"
+        talendType="id_String" type="VARCHAR"/>
+</schema>

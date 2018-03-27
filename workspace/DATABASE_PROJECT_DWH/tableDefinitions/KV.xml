@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema dbmsId="mysql_id">
+    <column comment="" default="" key="false" label="VNr" length="1000"
+        nullable="true" originalDbColumnName="VNr" originalLength="0"
+        pattern="" precision="-1" talendType="id_String" type="VARCHAR"/>
+    <column comment="" default="" key="false" label="KuNr" length="1000"
+        nullable="true" originalDbColumnName="KuNr" originalLength="0"
+        pattern="" precision="-1" talendType="id_String" type="VARCHAR"/>
+    <column comment="" default="" key="false" label="Art" length="1000"
+        nullable="true" originalDbColumnName="Art" originalLength="0"
+        pattern="" precision="-1" talendType="id_String" type="VARCHAR"/>
+    <column comment="" default="" key="false" label="VBeginn"
+        length="1000" nullable="true" originalDbColumnName="VBeginn"
+        originalLength="0" pattern="" precision="-1"
+        talendType="id_String" type="VARCHAR"/>
+    <column comment="" default="" key="false" label="Rate_pro_Monat"
+        length="1000" nullable="true"
+        originalDbColumnName="Rate_pro_Monat" originalLength="0"
+        pattern="" precision="-1" talendType="id_String" type="VARCHAR"/>
+    <column comment="" default="" key="false" label="SB" length="1000"
+        nullable="true" originalDbColumnName="SB" originalLength="0"
+        pattern="" precision="-1" talendType="id_String" type="VARCHAR"/>
+    <column comment="" default="" key="false" label="R1" length="1000"
+        nullable="true" originalDbColumnName="R1" originalLength="0"
+        pattern="" precision="-1" talendType="id_String" type="VARCHAR"/>
+    <column comment="" default="" key="false" label="R2" length="1000"
+        nullable="true" originalDbColumnName="R2" originalLength="0"
+        pattern="" precision="-1" talendType="id_String" type="VARCHAR"/>
+    <column comment="" default="" key="false" label="R3" length="1000"
+        nullable="true" originalDbColumnName="R3" originalLength="1000"
+        pattern="" precision="-1" talendType="id_String" type="VARCHAR"/>
+</schema>
