@@ -9,23 +9,23 @@
     <column comment="" default="" key="false" label="Wertbetrag"
         length="-1" nullable="true" originalDbColumnName="Wertbetrag"
         originalLength="0" pattern="" precision="-1"
-        talendType="id_String" type="TEXT"/>
+        talendType="id_Double" type="DOUBLE"/>
     <column comment="" default="" key="false" label="Rate_pro_Monat"
         length="-1" nullable="true"
         originalDbColumnName="Rate_pro_Monat" originalLength="0"
-        pattern="" precision="-1" talendType="id_String" type="TEXT"/>
+        pattern="" precision="-1" talendType="id_Double" type="DOUBLE"/>
     <column comment="" default="" key="false" label="Rate_pro_Quartal"
         length="-1" nullable="true"
         originalDbColumnName="Rate_pro_Quartal" originalLength="0"
-        pattern="" precision="-1" talendType="id_String" type="TEXT"/>
+        pattern="" precision="-1" talendType="id_Double" type="DOUBLE"/>
     <column comment="" default="" key="false" label="Rate_pro_Halbjahr"
         length="-1" nullable="true"
         originalDbColumnName="Rate_pro_Halbjahr" originalLength="0"
-        pattern="" precision="-1" talendType="id_String" type="TEXT"/>
+        pattern="" precision="-1" talendType="id_Double" type="DOUBLE"/>
     <column comment="" default="" key="false" label="Rate_pro_Jahr"
         length="-1" nullable="true" originalDbColumnName="Rate_pro_Jahr"
         originalLength="0" pattern="" precision="-1"
-        talendType="id_String" type="TEXT"/>
+        talendType="id_Double" type="DOUBLE"/>
     <column comment="" default="" key="false" label="Zahlungsweise"
         length="-1" nullable="true" originalDbColumnName="Zahlungsweise"
         originalLength="0" pattern="" precision="-1"

@@ -15,7 +15,7 @@
     <column comment="" default="" key="false" label="Neuwert"
         length="-1" nullable="true" originalDbColumnName="Neuwert"
         originalLength="0" pattern="" precision="-1"
-        talendType="id_String" type="TEXT"/>
+        talendType="id_Double" type="DOUBLE"/>
     <column comment="" default="" key="false" label="Erstzulassung"
         length="-1" nullable="true" originalDbColumnName="Erstzulassung"
         originalLength="0" pattern="" precision="-1"
@@ -27,15 +27,15 @@
     <column comment="" default="" key="false" label="HP_pro_Monat"
         length="-1" nullable="true" originalDbColumnName="HP_pro_Monat"
         originalLength="0" pattern="" precision="-1"
-        talendType="id_String" type="TEXT"/>
+        talendType="id_Double" type="DOUBLE"/>
     <column comment="" default="" key="false" label="TK_pro_Monat"
         length="-1" nullable="true" originalDbColumnName="TK_pro_Monat"
         originalLength="1000" pattern="" precision="-1"
-        talendType="id_String" type="TEXT"/>
+        talendType="id_Double" type="DOUBLE"/>
     <column comment="" default="" key="false" label="VK_pro_Monat"
         length="-1" nullable="true" originalDbColumnName="VK_pro_Monat"
         originalLength="1000" pattern="" precision="-1"
-        talendType="id_String" type="TEXT"/>
+        talendType="id_Double" type="DOUBLE"/>
     <column comment="" default="" key="false" label="HP_Satz"
         length="-1" nullable="true" originalDbColumnName="HP_Satz"
         originalLength="1000" pattern="" precision="-1"
@@ -55,18 +55,18 @@
     <column comment="" default="" key="false" label="SB_TK" length="-1"
         nullable="true" originalDbColumnName="SB_TK"
         originalLength="1000" pattern="" precision="-1"
-        talendType="id_String" type="TEXT"/>
+        talendType="id_Double" type="DOUBLE"/>
     <column comment="" default="" key="false" label="SBVK" length="-1"
         nullable="true" originalDbColumnName="SBVK"
         originalLength="1000" pattern="" precision="-1"
-        talendType="id_String" type="TEXT"/>
+        talendType="id_Double" type="DOUBLE"/>
     <column comment="" default="" key="false" label="Schadensumme_Sach"
         length="-1" nullable="true"
         originalDbColumnName="Schadensumme_Sach" originalLength="1000"
-        pattern="" precision="-1" talendType="id_String" type="TEXT"/>
+        pattern="" precision="-1" talendType="id_Double" type="DOUBLE"/>
     <column comment="" default="" key="false"
         label="Schadenssumme_Person" length="-1" nullable="true"
         originalDbColumnName="Schadenssumme_Person"
         originalLength="1000" pattern="" precision="-1"
-        talendType="id_String" type="TEXT"/>
+        talendType="id_Double" type="DOUBLE"/>
 </schema>
