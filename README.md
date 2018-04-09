@@ -2,7 +2,7 @@
 Data Warehousing Projekt, Gruppe B
 
 # Importing excel data into the landing zone
-The Import was accomplished by using the Jaspersoftl ETL tool.
+The Import was accomplished by using the Jaspersoft ETL tool.
 You can download it [here](https://community.jaspersoft.com/community-download)
 
 ## Running import jobs
