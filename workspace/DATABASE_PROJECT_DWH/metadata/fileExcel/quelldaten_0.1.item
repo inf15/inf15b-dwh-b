@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:TalendMetadata="http://www.talend.org/metadata/connection/2010" xmlns:orgomg.cwm.resource.record="http:///orgomg/cwm/resource/record.ecore">
+  <TalendMetadata:FileExcelConnection xmi:id="_1DY1wDv8Eei-bN4jzXvOuw" name="quelldaten" dataPackage="_1DY1wTv8Eei-bN4jzXvOuw" Server="Localhost 127.0.0.1" FilePath="/home/sascha/Prog/Workspaces/dhbw/inf15b-dwh-b/quelldaten/DHBW Mosbach Versicherungen B.xlsx" Encoding="UTF-8" UseHeader="true" HeaderValue="2" FirstLineCaption="true" SheetName="KFZ" firstColumn="1" thousandSeparator="','" decimalSeparator="'.'" selectAllSheets="true" sheetList="KFZ:w&#xA;Sach:w&#xA;BU:w&#xA;KV:w&#xA;LV:w&#xA;Stammdaten:w&#xA;">
+    <sheetColumns>A</sheetColumns>
+    <sheetColumns>B</sheetColumns>
+    <sheetColumns>C</sheetColumns>
+    <sheetColumns>D</sheetColumns>
+    <sheetColumns>E</sheetColumns>
+    <sheetColumns>F</sheetColumns>
+    <sheetColumns>G</sheetColumns>
+    <sheetColumns>H</sheetColumns>
+    <sheetColumns>I</sheetColumns>
+    <sheetColumns>J</sheetColumns>
+    <sheetColumns>K</sheetColumns>
+    <sheetColumns>L</sheetColumns>
+    <sheetColumns>M</sheetColumns>
+    <sheetColumns>N</sheetColumns>
+    <sheetColumns>O</sheetColumns>
+    <sheetColumns>P</sheetColumns>
+    <sheetColumns>Q</sheetColumns>
+    <sheetColumns>R</sheetColumns>
+    <sheetColumns>S</sheetColumns>
+  </TalendMetadata:FileExcelConnection>
+  <orgomg.cwm.resource.record:RecordFile xmi:id="_1DY1wTv8Eei-bN4jzXvOuw" name="default" dataManager="_1DY1wDv8Eei-bN4jzXvOuw">
+    <ownedElement xsi:type="TalendMetadata:MetadataTable" xmi:id="_1DZc0Dv8Eei-bN4jzXvOuw" id="_Y2Q4sDv8Eei-bN4jzXvOuw" label="metadata">
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_1DZc0Tv8Eei-bN4jzXvOuw" label="Column0" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_1DZc0jv8Eei-bN4jzXvOuw" label="VNr" length="8" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_1DZc0zv8Eei-bN4jzXvOuw" label="KuNr" length="6" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_1DZc1Dv8Eei-bN4jzXvOuw" label="KFZ_KZ" length="7" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_1DZc1Tv8Eei-bN4jzXvOuw" label="Art" length="1" talendType="id_Character" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_1DZc1jv8Eei-bN4jzXvOuw" label="Neuwert" length="5" talendType="id_Integer" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_1DZc1zv8Eei-bN4jzXvOuw" label="Erstzulassung" length="8" talendType="id_Integer" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_1DZc2Dv8Eei-bN4jzXvOuw" label="Vbeginn" length="29" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_1DZc2Tv8Eei-bN4jzXvOuw" label="HP_Monat" length="18" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_1DZc2jv8Eei-bN4jzXvOuw" label="TK_Monat" length="18" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_1DZc2zv8Eei-bN4jzXvOuw" label="VK_Monat" length="18" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_1DZc3Dv8Eei-bN4jzXvOuw" label="HP_Satz" length="4" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_1DZc3Tv8Eei-bN4jzXvOuw" label="TK_Satz" length="4" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_1DZc3jv8Eei-bN4jzXvOuw" label="VK_Satz" length="4" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_1DZc3zv8Eei-bN4jzXvOuw" label="VK_J_N" length="1" talendType="id_Character" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_1DZc4Dv8Eei-bN4jzXvOuw" label="SB_TK" length="3" talendType="id_Integer" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_1DaD4Dv8Eei-bN4jzXvOuw" label="SBVK" length="4" talendType="id_Integer" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_1DaD4Tv8Eei-bN4jzXvOuw" label="Schadensumme_Sach" length="6" talendType="id_Integer" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_1DaD4jv8Eei-bN4jzXvOuw" label="Schadensumme_Person" length="7" talendType="id_Integer" pattern="&quot;dd-MM-yyyy&quot;"/>
+    </ownedElement>
+  </orgomg.cwm.resource.record:RecordFile>
+</xmi:XMI>
