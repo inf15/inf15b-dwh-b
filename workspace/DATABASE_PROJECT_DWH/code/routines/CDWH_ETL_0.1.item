@@ -43,5 +43,37 @@ public class CDWH_ETL {
     	return Integer.parseInt(numberOnly);
     }
     
+    public static String getPrioContact(String prio, 
+    		String telpriv, String telarb, String mobil, String fax, 
+    		String email1, String email2){
+    	
+    	String retVal = "";
+    	
+    	switch (prio) {
+    	case "M":
+    		retVal =  "Telefon Arbeit";
+    		break;
+    	case "N":
+    		retVal =  "Telefon Mobil";
+    		break;
+    	case "O":
+    		retVal =  "Fax";
+    		break;
+    	case "P":
+    		retVal =  "E-Mail 1";
+    		break;
+    	case "Q":
+    		retVal =  "E-Mail 2";
+    		break;
+    	default:
+    		retVal =  "Telefon privat";
+    	}
+    	
+    	if ( retVal.isEmpty() ) {
+    		return "Telefon privat";
+    	}
+    	return retVal;
+    }
+    
     
 }

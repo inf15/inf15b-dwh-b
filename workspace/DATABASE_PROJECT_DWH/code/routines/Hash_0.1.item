@@ -36,8 +36,8 @@ public class Hash {
      */
     public static String sha1(String message) throws UnsupportedEncodingException, NoSuchAlgorithmException {
             if (message == null) {
-                System.out.println("ERROR: NO INPUT VALUE!"); //$NON-NLS-1$
-                return null;
+                System.out.println("WARNING: NO INPUT VALUE!");
+                return "";
             }
             MessageDigest md = MessageDigest.getInstance("SHA1");
             byte[] hash = md.digest(message.getBytes("UTF-8"));
