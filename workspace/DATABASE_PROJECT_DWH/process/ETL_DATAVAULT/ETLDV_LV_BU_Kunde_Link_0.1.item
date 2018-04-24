@@ -168,6 +168,7 @@
       <column comment="" key="false" length="80" name="KundeHashID" nullable="false" pattern="" precision="-1" sourceType="" type="id_String" originalLength="80" usefulColumn="true"/>
       <column comment="" key="false" length="80" name="LvHashID" nullable="false" pattern="" precision="-1" sourceType="" type="id_String" originalLength="80" usefulColumn="true"/>
       <column comment="" key="false" length="80" name="BuHashID" nullable="false" pattern="" precision="-1" sourceType="" type="id_String" originalLength="80" usefulColumn="true"/>
+      <column comment="" key="false" length="1000" name="Source" nullable="false" pattern="" precision="-1" sourceType="" type="id_String" originalLength="1000" usefulColumn="true"/>
     </metadata>
     <nodeData xsi:type="MapperData">
       <uiProperties shellMaximized="true"/>
@@ -176,12 +177,14 @@
         <mapperTableEntries name="KundeHash" expression="Hash.sha1(row1.KuNr)" type="id_String"/>
         <mapperTableEntries name="LvHash" expression="Hash.sha1(row1.VNr1)" type="id_String"/>
         <mapperTableEntries name="BuHash" expression="Hash.sha1(row1.VNr)" type="id_String"/>
+        <mapperTableEntries name="Source" expression="&quot;IZ_LV LEFT JOIN IZ_BU ON KuNr = KuNr&quot;" type="id_String"/>
       </varTables>
       <outputTables sizeState="INTERMEDIATE" name="CDWH_L_LV_BU_Kunde">
         <mapperTableEntries name="LinkHashID" expression="Var.LinkHash " type="id_String"/>
         <mapperTableEntries name="KundeHashID" expression="Var.KundeHash" type="id_String"/>
         <mapperTableEntries name="LvHashID" expression="Var.LvHash" type="id_String"/>
         <mapperTableEntries name="BuHashID" expression="Var.BuHash" type="id_String"/>
+        <mapperTableEntries name="Source" expression="Var.Source " type="id_String"/>
       </outputTables>
       <inputTables sizeState="INTERMEDIATE" name="row1" matchingMode="UNIQUE_MATCH" lookupMode="LOAD_ONCE">
         <mapperTableEntries name="VNr" type="id_String" nullable="true"/>
@@ -244,6 +247,11 @@
       <elementValue elementRef="DELETE_KEY" value="false"/>
       <elementValue elementRef="UPDATABLE" value="true"/>
       <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Source"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
     </elementParameter>
     <elementParameter field="CHECK" name="USE_HINT_OPTIONS" value="false"/>
     <elementParameter field="TABLE" name="HINT_OPTIONS" show="false"/>
@@ -258,12 +266,14 @@
       <column comment="" key="false" length="80" name="KundeHashID" nullable="false" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" originalLength="80" usefulColumn="true"/>
       <column comment="" key="false" length="80" name="LvHashID" nullable="false" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" originalLength="80" usefulColumn="true"/>
       <column comment="" key="false" length="80" name="BuHashID" nullable="false" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" originalLength="80" usefulColumn="true"/>
+      <column comment="" key="false" length="1000" name="Source" nullable="false" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" originalLength="1000" usefulColumn="true"/>
     </metadata>
     <metadata connector="REJECT" name="REJECT">
       <column comment="" key="true" length="80" name="LinkHashID" nullable="false" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" originalLength="80" usefulColumn="true"/>
       <column comment="" key="false" length="80" name="KundeHashID" nullable="false" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" originalLength="80" usefulColumn="true"/>
       <column comment="" key="false" length="80" name="LvHashID" nullable="false" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" originalLength="80" usefulColumn="true"/>
       <column comment="" key="false" length="80" name="BuHashID" nullable="false" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" originalLength="80" usefulColumn="true"/>
+      <column comment="" key="false" length="1000" name="Source" nullable="false" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" originalLength="1000" usefulColumn="true"/>
       <column defaultValue="" key="false" length="255" name="errorCode" nullable="true" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
       <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
     </metadata>
@@ -316,6 +326,12 @@
       <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
       <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
       <elementValue elementRef="TRACE_COLUMN" value="LinkHashID"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="RecordSource"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="Source"/>
       <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
       <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
     </elementParameter>

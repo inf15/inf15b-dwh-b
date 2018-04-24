@@ -246,6 +246,8 @@
       <column comment="" key="false" length="80" name="LVHashID" nullable="false" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" defaultValue="" key="false" length="-1" name="Laufzeit" nullable="false" pattern="" precision="-1" sourceType="" type="id_Integer" originalLength="42" usefulColumn="true"/>
       <column comment="" key="false" length="100" name="LZTyp" nullable="false" pattern="" precision="-1" sourceType="" type="id_String" originalLength="100" usefulColumn="true"/>
+      <column comment="" key="false" length="50" name="Load_DTS" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="1000" name="Record_Source" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
     </metadata>
     <metadata connector="FLOW" name="CDWH_S_Rate">
       <column comment="" key="true" length="80" name="RateHashID" nullable="false" pattern="" precision="-1" sourceType="" type="id_String" originalLength="80" usefulColumn="true"/>
@@ -259,7 +261,7 @@
       <column comment="" key="false" length="1000" name="Record_Source" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
     </metadata>
     <nodeData xsi:type="MapperData">
-      <uiProperties/>
+      <uiProperties shellMaximized="true"/>
       <varTables sizeState="INTERMEDIATE" name="Var">
         <mapperTableEntries name="LVHash" expression="Hash.sha1(row1.VNr)" type="id_String"/>
         <mapperTableEntries name="LVBedHash" expression="Hash.sha1(row1.VNr + &quot;~&quot; + row1.Wertfaktor + &quot;~&quot; + row1.VBeginn + &quot;~&quot; + row1.Beguenstigter)" type="id_String"/>
@@ -272,7 +274,7 @@
         <mapperTableEntries name="LVHash" expression="Var.LVHash " type="id_String"/>
         <mapperTableEntries name="VNr" expression="row1.VNr " type="id_String" nullable="true"/>
         <mapperTableEntries name="Load_DTS" expression="row1.Load_DTS " type="id_String" nullable="true"/>
-        <mapperTableEntries name="Record_Source" expression="row1.Record_Source " type="id_String" nullable="true"/>
+        <mapperTableEntries name="Record_Source" expression="row1.Record_Source + &quot; > IZ_LV&quot;" type="id_String" nullable="true"/>
       </outputTables>
       <outputTables sizeState="INTERMEDIATE" name="CDWH_S_LV_Vertragsbedingungen">
         <mapperTableEntries name="LVBedHash" expression="Var.LVBedHash " type="id_String"/>
@@ -281,13 +283,15 @@
         <mapperTableEntries name="VBeginn" expression="row1.VBeginn " type="id_String" nullable="true"/>
         <mapperTableEntries name="Beguenstigter" expression="row1.Beguenstigter " type="id_String" nullable="true"/>
         <mapperTableEntries name="Load_DTS" expression="row1.Load_DTS " type="id_String" nullable="true"/>
-        <mapperTableEntries name="Record_Source" expression="row1.Record_Source " type="id_String" nullable="true"/>
+        <mapperTableEntries name="Record_Source" expression="row1.Record_Source  + &quot; > IZ_LV&quot;" type="id_String" nullable="true"/>
       </outputTables>
       <outputTables sizeState="INTERMEDIATE" name="CDWH_S_Rentenbeginn">
         <mapperTableEntries name="LZHashID" expression="Var.LzHash " type="id_String"/>
         <mapperTableEntries name="LVHashID" expression="Var.LVHash " type="id_String"/>
         <mapperTableEntries name="Laufzeit" expression="Var.Laufzeit " type="id_Integer"/>
         <mapperTableEntries name="LZTyp" expression="Var.LZistValOrWert " type="id_String"/>
+        <mapperTableEntries name="Load_DTS" expression="row1.Load_DTS " type="id_String" nullable="true"/>
+        <mapperTableEntries name="Record_Source" expression="row1.Record_Source  + &quot; > IZ_LV&quot;" type="id_String" nullable="true"/>
       </outputTables>
       <outputTables sizeState="INTERMEDIATE" name="CDWH_S_Rate">
         <mapperTableEntries name="RateHashID" expression="Var.RateHash " type="id_String"/>
@@ -298,7 +302,7 @@
         <mapperTableEntries name="Rate_pro_Jahr" expression="row1.Rate_pro_Jahr " type="id_Double" nullable="true"/>
         <mapperTableEntries name="Zahlungsweise" expression="row1.Zahlungsweise " type="id_String" nullable="true"/>
         <mapperTableEntries name="Load_DTS" expression="row1.Load_DTS " type="id_String" nullable="true"/>
-        <mapperTableEntries name="Record_Source" expression="row1.Record_Source " type="id_String" nullable="true"/>
+        <mapperTableEntries name="Record_Source" expression="row1.Record_Source  + &quot; > IZ_LV&quot;" type="id_String" nullable="true"/>
       </outputTables>
       <inputTables sizeState="INTERMEDIATE" name="row1" matchingMode="UNIQUE_MATCH" lookupMode="LOAD_ONCE">
         <mapperTableEntries name="Load_DTS" type="id_String" nullable="true"/>
@@ -662,6 +666,16 @@
       <elementValue elementRef="DELETE_KEY" value="false"/>
       <elementValue elementRef="UPDATABLE" value="true"/>
       <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Load_DTS"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Record_Source"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
     </elementParameter>
     <elementParameter field="CHECK" name="USE_HINT_OPTIONS" value="false"/>
     <elementParameter field="TABLE" name="HINT_OPTIONS" show="false"/>
@@ -676,12 +690,16 @@
       <column comment="" key="false" length="80" name="LVHashID" nullable="false" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
       <column comment="" defaultValue="" key="false" length="-1" name="Laufzeit" nullable="false" pattern="" precision="-1" sourceType="INT" type="id_Integer" originalLength="42" usefulColumn="true"/>
       <column comment="" key="false" length="100" name="LZTyp" nullable="false" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" originalLength="100" usefulColumn="true"/>
+      <column comment="" key="false" length="50" name="Load_DTS" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="1000" name="Record_Source" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
     </metadata>
     <metadata connector="REJECT" name="REJECT">
       <column comment="" key="true" length="80" name="LZHashID" nullable="false" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" originalLength="80" usefulColumn="true"/>
       <column comment="" key="false" length="80" name="LVHashID" nullable="false" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
       <column comment="" defaultValue="" key="false" length="-1" name="Laufzeit" nullable="false" pattern="" precision="-1" sourceType="INT" type="id_Integer" originalLength="42" usefulColumn="true"/>
       <column comment="" key="false" length="100" name="LZTyp" nullable="false" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" originalLength="100" usefulColumn="true"/>
+      <column comment="" key="false" length="50" name="Load_DTS" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="1000" name="Record_Source" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
       <column defaultValue="" key="false" length="255" name="errorCode" nullable="true" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
       <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
     </metadata>
@@ -791,6 +809,12 @@
       <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
       <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
       <elementValue elementRef="TRACE_COLUMN" value="LZTyp"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="Record_Source"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="Load_DTS"/>
       <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
       <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
     </elementParameter>

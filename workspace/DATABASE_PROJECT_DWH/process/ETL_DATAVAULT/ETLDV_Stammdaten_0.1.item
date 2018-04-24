@@ -319,7 +319,7 @@
       <column comment="" key="false" length="10" name="PLZ" nullable="true" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true"/>
       <column comment="" key="false" length="100" name="Ort" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="50" name="Load_DTS" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="50" name="Record_Source" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="1000" name="Record_Source" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
     </metadata>
     <metadata connector="FLOW" name="CDWH_S_Kunde_Kontakt">
       <column comment="" key="true" length="80" name="KontaktHashkey" nullable="false" pattern="" precision="-1" sourceType="" type="id_String" originalLength="80" usefulColumn="true"/>
@@ -331,9 +331,9 @@
       <column comment="" key="false" length="100" name="eMail1" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="100" name="eMail2" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="100" name="Prio_Kontakt" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="50" name="Load_DTS" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="50" name="Record_Source" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="50" name="PrioKontaktValue" nullable="false" pattern="" precision="-1" sourceType="" type="id_String" originalLength="50" usefulColumn="true"/>
+      <column comment="" key="false" length="50" name="Load_DTS" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="1000" name="Record_Source" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
     </metadata>
     <nodeData xsi:type="MapperData">
       <uiProperties shellMaximized="true"/>
@@ -369,7 +369,7 @@
         <mapperTableEntries name="Geb_Datum" expression="row1.Geb_Datum " type="id_String" nullable="true"/>
         <mapperTableEntries name="Geb_Ort" expression="row1.Geb_Ort " type="id_String" nullable="true"/>
         <mapperTableEntries name="Load_DTS" expression="row1.Load_DTS " type="id_String" nullable="true"/>
-        <mapperTableEntries name="Record_Source" expression="row1.Record_Source " type="id_String" nullable="true"/>
+        <mapperTableEntries name="Record_Source" expression="row1.Record_Source + &quot; > IZ_Stammdaten&quot;" type="id_String" nullable="true"/>
       </outputTables>
       <outputTables sizeState="INTERMEDIATE" name="S_Kunde_Familie">
         <mapperTableEntries name="FamilieHashID" expression="Var.FamilieHash " type="id_String"/>
@@ -377,7 +377,7 @@
         <mapperTableEntries name="FamStand" expression="row1.FamStand " type="id_String" nullable="true"/>
         <mapperTableEntries name="Anz_Kinder" expression="row1.Anz_Kinder " type="id_Integer" nullable="true"/>
         <mapperTableEntries name="Load_DTS" expression="row1.Load_DTS " type="id_String" nullable="true"/>
-        <mapperTableEntries name="Record_Source" expression="row1.Record_Source " type="id_String" nullable="true"/>
+        <mapperTableEntries name="Record_Source" expression="row1.Record_Source + &quot; > IZ_Stammdaten&quot;" type="id_String" nullable="true"/>
       </outputTables>
       <outputTables sizeState="INTERMEDIATE" name="CDWH_Kunde_Mitversichert">
         <mapperTableEntries name="KundeHashID" expression="Var.KundeHashkey" type="id_String"/>
@@ -385,7 +385,7 @@
         <mapperTableEntries name="Anz_Kinder_MV" expression="row1.Anz_Kinder_MV " type="id_Integer" nullable="true"/>
         <mapperTableEntries name="Ehepart_MV" expression="row1.Ehepart_MV " type="id_String" nullable="true"/>
         <mapperTableEntries name="Load_DTS" expression="row1.Load_DTS " type="id_String" nullable="true"/>
-        <mapperTableEntries name="Record_Source" expression="row1.Record_Source " type="id_String" nullable="true"/>
+        <mapperTableEntries name="Record_Source" expression="row1.Record_Source + &quot; > IZ_Stammdaten&quot;" type="id_String" nullable="true"/>
       </outputTables>
       <outputTables sizeState="INTERMEDIATE" name="CDWH_Kunde_Adresse">
         <mapperTableEntries name="AdresseHashkey" expression="Var.AdresseHash" type="id_String"/>
@@ -395,7 +395,7 @@
         <mapperTableEntries name="PLZ" expression="row1.PLZ " type="id_Integer" nullable="true"/>
         <mapperTableEntries name="Ort" expression="row1.Ort " type="id_String" nullable="true"/>
         <mapperTableEntries name="Load_DTS" expression="row1.Load_DTS " type="id_String" nullable="true"/>
-        <mapperTableEntries name="Record_Source" expression="row1.Record_Source " type="id_String" nullable="true"/>
+        <mapperTableEntries name="Record_Source" expression="row1.Record_Source + &quot; > IZ_Stammdaten&quot;" type="id_String" nullable="true"/>
       </outputTables>
       <outputTables sizeState="INTERMEDIATE" name="CDWH_S_Kunde_Kontakt">
         <mapperTableEntries name="KontaktHashkey" expression="Var.KontaktHash " type="id_String"/>
@@ -407,9 +407,9 @@
         <mapperTableEntries name="eMail1" expression="row1.eMail1 " type="id_String" nullable="true"/>
         <mapperTableEntries name="eMail2" expression="row1.eMail2 " type="id_String" nullable="true"/>
         <mapperTableEntries name="Prio_Kontakt" expression="row1.Prio_Kontakt " type="id_String" nullable="true"/>
-        <mapperTableEntries name="Load_DTS" expression="row1.Load_DTS " type="id_String" nullable="true"/>
-        <mapperTableEntries name="Record_Source" expression="row1.Record_Source " type="id_String" nullable="true"/>
         <mapperTableEntries name="PrioKontaktValue" expression="Var.PrioKontaktValue " type="id_String"/>
+        <mapperTableEntries name="Load_DTS" expression="row1.Load_DTS " type="id_String" nullable="true"/>
+        <mapperTableEntries name="Record_Source" expression="row1.Record_Source + &quot; > IZ_Stammdaten&quot;" type="id_String" nullable="true"/>
       </outputTables>
       <inputTables sizeState="INTERMEDIATE" name="row1" matchingMode="UNIQUE_MATCH" lookupMode="LOAD_ONCE">
         <mapperTableEntries name="Load_DTS" type="id_String" nullable="true"/>
@@ -897,7 +897,7 @@
       <column comment="" key="false" length="10" name="PLZ" nullable="true" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true"/>
       <column comment="" key="false" length="100" name="Ort" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="50" name="Load_DTS" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="50" name="Record_Source" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="1000" name="Record_Source" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
     </metadata>
     <metadata connector="REJECT" name="REJECT">
       <column comment="" key="true" length="80" name="AdresseHashkey" nullable="false" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" originalLength="80" usefulColumn="true"/>
@@ -907,7 +907,7 @@
       <column comment="" key="false" length="10" name="PLZ" nullable="true" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true"/>
       <column comment="" key="false" length="100" name="Ort" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="50" name="Load_DTS" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="50" name="Record_Source" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="1000" name="Record_Source" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
       <column defaultValue="" key="false" length="255" name="errorCode" nullable="true" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
       <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
     </metadata>
@@ -1083,17 +1083,17 @@
       <elementValue elementRef="DELETE_KEY" value="false"/>
       <elementValue elementRef="UPDATABLE" value="true"/>
       <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="PrioKontaktValue"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="Load_DTS"/>
       <elementValue elementRef="UPDATE_KEY" value="false"/>
       <elementValue elementRef="DELETE_KEY" value="false"/>
       <elementValue elementRef="UPDATABLE" value="true"/>
       <elementValue elementRef="INSERTABLE" value="true"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="Record_Source"/>
-      <elementValue elementRef="UPDATE_KEY" value="false"/>
-      <elementValue elementRef="DELETE_KEY" value="false"/>
-      <elementValue elementRef="UPDATABLE" value="true"/>
-      <elementValue elementRef="INSERTABLE" value="true"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="PrioKontaktValue"/>
       <elementValue elementRef="UPDATE_KEY" value="false"/>
       <elementValue elementRef="DELETE_KEY" value="false"/>
       <elementValue elementRef="UPDATABLE" value="true"/>
@@ -1117,9 +1117,9 @@
       <column comment="" key="false" length="100" name="eMail1" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="100" name="eMail2" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="100" name="Prio_Kontakt" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="50" name="Load_DTS" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="50" name="Record_Source" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="50" name="PrioKontaktValue" nullable="false" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" originalLength="50" usefulColumn="true"/>
+      <column comment="" key="false" length="50" name="Load_DTS" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="1000" name="Record_Source" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
     </metadata>
     <metadata connector="REJECT" name="REJECT">
       <column comment="" key="true" length="80" name="KontaktHashkey" nullable="false" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" originalLength="80" usefulColumn="true"/>
@@ -1131,9 +1131,9 @@
       <column comment="" key="false" length="100" name="eMail1" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="100" name="eMail2" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="100" name="Prio_Kontakt" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="50" name="Load_DTS" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="50" name="Record_Source" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="50" name="PrioKontaktValue" nullable="false" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" originalLength="50" usefulColumn="true"/>
+      <column comment="" key="false" length="50" name="Load_DTS" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="1000" name="Record_Source" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
       <column defaultValue="" key="false" length="255" name="errorCode" nullable="true" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
       <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
     </metadata>
