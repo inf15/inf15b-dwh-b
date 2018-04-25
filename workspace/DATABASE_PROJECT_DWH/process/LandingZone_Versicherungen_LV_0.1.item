@@ -106,7 +106,7 @@
   </parameters>
   <node componentName="tFileInputExcel" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="352" posY="64">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tFileInputExcel_1" show="false"/>
-    <elementParameter field="DIRECTORY" name="JAVA_LIBRARY_PATH" value="/home/robert/Downloads/JETLXCmmty-20150908_1633-V6.0.1/configuration/lib/java" show="false"/>
+    <elementParameter field="DIRECTORY" name="JAVA_LIBRARY_PATH" value="C:\Users\Kevin Obst\.eclipse\org.talend.rcp.branding.jetlxcmmty.product_6.0.1.20150908_1633_1979861742_win32_win32_x86_64\configuration\lib\java" show="false"/>
     <elementParameter field="CHECK" name="VERSION_2007" value="true"/>
     <elementParameter field="FILE" name="FILENAME" value="&quot;/home/robert/Downloads/excel/versicherungen.xlsx&quot;"/>
     <elementParameter field="CHECK" name="ALL_SHEETS" value="false"/>
@@ -232,7 +232,7 @@
   </node>
   <node componentName="tMysqlOutput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="608" posY="64">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tMysqlOutput_1" show="false"/>
-    <elementParameter field="DIRECTORY" name="JAVA_LIBRARY_PATH" value="/home/robert/Downloads/JETLXCmmty-20150908_1633-V6.0.1/configuration/lib/java" show="false"/>
+    <elementParameter field="DIRECTORY" name="JAVA_LIBRARY_PATH" value="C:\Users\Kevin Obst\.eclipse\org.talend.rcp.branding.jetlxcmmty.product_6.0.1.20150908_1633_1979861742_win32_win32_x86_64\configuration\lib\java" show="false"/>
     <elementParameter field="CLOSED_LIST" name="DB_VERSION" value="MARIADB" show="false"/>
     <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="true"/>
     <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="tMysqlConnection_1"/>
@@ -243,7 +243,7 @@
     <elementParameter field="TEXT" name="USER" value="&quot;root&quot;" show="false"/>
     <elementParameter field="PASSWORD" name="PASS" value="r0M4Avw8nA8=" show="false"/>
     <elementParameter field="DBTABLE" name="TABLE" value="&quot;LV&quot;"/>
-    <elementParameter field="CLOSED_LIST" name="TABLE_ACTION" value="CREATE_IF_NOT_EXISTS"/>
+    <elementParameter field="CLOSED_LIST" name="TABLE_ACTION" value="DROP_IF_EXISTS_AND_CREATE"/>
     <elementParameter field="CLOSED_LIST" name="DATA_ACTION" value="INSERT"/>
     <elementParameter field="LABEL" name="NOTE" value="This option only applies when deploying and running in the Talend Runtime" show="false"/>
     <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" value="false" show="false"/>
@@ -259,7 +259,18 @@
     <elementParameter field="ENCODING_TYPE" name="ENCODING" value="&quot;ISO-8859-15&quot;" show="false"/>
     <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
     <elementParameter field="TEXT" name="COMMIT_EVERY" value="10000" show="false"/>
-    <elementParameter field="TABLE" name="ADD_COLS"/>
+    <elementParameter field="TABLE" name="ADD_COLS">
+      <elementValue elementRef="NAME" value="&quot;Load_DTS&quot;"/>
+      <elementValue elementRef="DATATYPE" value="VARCHAR(50)"/>
+      <elementValue elementRef="SQL" value="&quot;now()&quot;"/>
+      <elementValue elementRef="POS" value="BEFORE"/>
+      <elementValue elementRef="REFCOL" value="VNr"/>
+      <elementValue elementRef="NAME" value="&quot;Record_Source&quot;"/>
+      <elementValue elementRef="DATATYPE" value="VARCHAR(50)"/>
+      <elementValue elementRef="SQL" value="&quot;'Versicherungen LV'&quot;"/>
+      <elementValue elementRef="POS" value="BEFORE"/>
+      <elementValue elementRef="REFCOL" value="VNr"/>
+    </elementParameter>
     <elementParameter field="CHECK" name="USE_FIELD_OPTIONS" value="false"/>
     <elementParameter field="TABLE" name="FIELD_OPTIONS" show="false">
       <elementValue elementRef="SCHEMA_COLUMN" value="VNr"/>
@@ -364,7 +375,7 @@
   </node>
   <node componentName="tMysqlConnection" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="96" posY="64">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tMysqlConnection_1" show="false"/>
-    <elementParameter field="DIRECTORY" name="JAVA_LIBRARY_PATH" value="/home/robert/Downloads/JETLXCmmty-20150908_1633-V6.0.1/configuration/lib/java" show="false"/>
+    <elementParameter field="DIRECTORY" name="JAVA_LIBRARY_PATH" value="C:\Users\Kevin Obst\.eclipse\org.talend.rcp.branding.jetlxcmmty.product_6.0.1.20150908_1633_1979861742_win32_win32_x86_64\configuration\lib\java" show="false"/>
     <elementParameter field="CLOSED_LIST" name="DB_VERSION" value="MARIADB"/>
     <elementParameter field="TEXT" name="HOST" value="&quot;localhost&quot;"/>
     <elementParameter field="TEXT" name="TYPE" value="MySQL" show="false"/>
