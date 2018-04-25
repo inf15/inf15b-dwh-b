@@ -2,3 +2,4 @@ workspace/.JETEmitters/*
 workspace/.Java/*
 workspace/.metadata/*
 .metadata/*
+workspace/DATABASE_PROJECT_DWH/temp/*

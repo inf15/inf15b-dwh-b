@@ -108,7 +108,7 @@
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tFileInputExcel_1" show="false"/>
     <elementParameter field="DIRECTORY" name="JAVA_LIBRARY_PATH" value="C:\Users\Kevin Obst\.eclipse\org.talend.rcp.branding.jetlxcmmty.product_6.0.1.20150908_1633_1979861742_win32_win32_x86_64\configuration\lib\java" show="false"/>
     <elementParameter field="CHECK" name="VERSION_2007" value="true"/>
-    <elementParameter field="FILE" name="FILENAME" value="&quot;/home/robert/Downloads/excel/versicherungen.xlsx&quot;"/>
+    <elementParameter field="FILE" name="FILENAME" value="&quot;C:/Users/Kevin Obst/Documents/Git Repositories/Datenbanken II/inf15b-dwh-b/quelldaten/versicherungen.xlsx&quot;"/>
     <elementParameter field="CHECK" name="ALL_SHEETS" value="false"/>
     <elementParameter field="TABLE" name="SHEETLIST">
       <elementValue elementRef="SHEETNAME" value="&quot;Sach&quot;"/>
