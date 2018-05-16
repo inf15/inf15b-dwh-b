@@ -240,7 +240,7 @@
     <elementParameter field="TEXT" name="COMMIT_EVERY" value="10000" show="false"/>
     <elementParameter field="TABLE" name="ADD_COLS">
       <elementValue elementRef="NAME" value="&quot;Load_DTS&quot;"/>
-      <elementValue elementRef="DATATYPE" value="DATE"/>
+      <elementValue elementRef="DATATYPE" value="DATETIME"/>
       <elementValue elementRef="SQL" value="&quot;now()&quot;"/>
       <elementValue elementRef="POS" value="BEFORE"/>
       <elementValue elementRef="REFCOL" value="VNr"/>
