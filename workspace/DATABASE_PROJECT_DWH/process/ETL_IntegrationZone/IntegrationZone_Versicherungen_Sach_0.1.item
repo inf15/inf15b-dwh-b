@@ -106,9 +106,9 @@
   </parameters>
   <node componentName="tMysqlConnection" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="96" posY="64">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tMysqlConnection_1" show="false"/>
-    <elementParameter field="DIRECTORY" name="JAVA_LIBRARY_PATH" value="/data/dhome/Software/JaspersoftETL/configuration/lib/java" show="false"/>
+    <elementParameter field="DIRECTORY" name="JAVA_LIBRARY_PATH" value="C:\Program Files\Jaspersoft ETL\configuration\lib\java" show="false"/>
     <elementParameter field="CLOSED_LIST" name="DB_VERSION" value="MARIADB"/>
-    <elementParameter field="TEXT" name="HOST" value="&quot;192.168.57.250&quot;"/>
+    <elementParameter field="TEXT" name="HOST" value="&quot;localhost&quot;"/>
     <elementParameter field="TEXT" name="TYPE" value="MySQL" show="false"/>
     <elementParameter field="TEXT" name="PORT" value="&quot;3306&quot;"/>
     <elementParameter field="TEXT" name="DBNAME" value="&quot;database_project&quot;"/>
@@ -128,7 +128,7 @@
   </node>
   <node componentName="tMysqlInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="352" posY="64">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tMysqlInput_1" show="false"/>
-    <elementParameter field="DIRECTORY" name="JAVA_LIBRARY_PATH" value="/data/dhome/Software/JaspersoftETL/configuration/lib/java" show="false"/>
+    <elementParameter field="DIRECTORY" name="JAVA_LIBRARY_PATH" value="C:\Program Files\Jaspersoft ETL\configuration\lib\java" show="false"/>
     <elementParameter field="CLOSED_LIST" name="DB_VERSION" value="MYSQL_5" show="false"/>
     <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="true"/>
     <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="tMysqlConnection_1"/>
@@ -143,7 +143,7 @@
     <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" value="" show="false"/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
     <elementParameter field="GUESS_SCHEMA" name="GUESS_SCHEMA" value="&quot;&quot;"/>
-    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;SELECT &#xA;  `Sach`.`VNr`, &#xA;  `Sach`.`KuNr`, &#xA;  `Sach`.`Art`, &#xA;  `Sach`.`V_Wert`, &#xA;  `Sach`.`VBeginn`, &#xA;  `Sach`.`Laufzeit`, &#xA;  `Sach`.`K_Frist`, &#xA;  `Sach`.`Rate_pro_Monat`, &#xA;  `Sach`.`Rate_pro_Quartal`, &#xA;  `Sach`.`Rate_pro_Halbjahr`, &#xA;  `Sach`.`Rate_pro_Jahr`, &#xA;  `Sach`.`Zahlungsweise`&#xA;FROM `Sach`&quot;"/>
+    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;SELECT &#xA;  `Sach`.`VNr`, &#xA;  `Sach`.`KuNr`, &#xA;  `Sach`.`Art`, &#xA;  `Sach`.`V_Wert`, &#xA;  `Sach`.`VBeginn`, &#xA;  `Sach`.`Laufzeit`, &#xA;  `Sach`.`K_Frist`, &#xA;  `Sach`.`Rate_pro_Monat`, &#xA;  `Sach`.`Rate_pro_Quartal`, &#xA;  `Sach`.`Rate_pro_Halbjahr`, &#xA;  `Sach`.`Rate_pro_Jahr`, &#xA;  `Sach`.`Zahlungsweise`, &#xA;  `Sach`.`Load_DTS`, &#xA;  `Sach`.`Record_Source`&#xA;FROM `Sach`&quot;"/>
     <elementParameter field="LABEL" name="NOTE" value="This option only applies when deploying and running in the Talend Runtime" show="false"/>
     <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" value="false" show="false"/>
     <elementParameter field="TEXT" name="DATASOURCE_ALIAS" value="&quot;&quot;" show="false"/>
@@ -178,6 +178,10 @@
       <elementValue elementRef="TRIM" value="false"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="Zahlungsweise"/>
       <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Load_DTS"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Record_Source"/>
+      <elementValue elementRef="TRIM" value="false"/>
     </elementParameter>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tMysqlInput_1">
@@ -191,13 +195,15 @@
       <column comment="" key="false" length="-1" name="Rate_pro_Monat" nullable="true" pattern="" precision="-1" sourceType="TEXT" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="Rate_pro_Quartal" nullable="true" pattern="" precision="-1" sourceType="TEXT" type="id_String" originalLength="1000" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="Rate_pro_Halbjahr" nullable="true" pattern="" precision="-1" sourceType="TEXT" type="id_String" originalLength="1000" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="false" length="-1" name="Rate_pro_Jahr" nullable="true" pattern="" precision="-1" sourceType="TEXT" type="id_String" originalLength="1000" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="false" length="-1" name="Zahlungsweise" nullable="true" pattern="" precision="-1" sourceType="TEXT" type="id_String" originalLength="1000" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Rate_pro_Jahr" nullable="true" pattern="" precision="-1" sourceType="TEXT" type="id_String" originalLength="1000" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Zahlungsweise" nullable="true" pattern="" precision="-1" sourceType="TEXT" type="id_String" originalLength="1000" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Load_DTS" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="-1" sourceType="DATETIME" type="id_Date" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Record_Source" nullable="true" pattern="" precision="-1" sourceType="TEXT" type="id_String" usefulColumn="true"/>
     </metadata>
   </node>
   <node componentName="tFilterRow" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="512" posY="160">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tFilterRow_1" show="false"/>
-    <elementParameter field="DIRECTORY" name="JAVA_LIBRARY_PATH" value="/data/dhome/Software/JaspersoftETL/configuration/lib/java" show="false"/>
+    <elementParameter field="DIRECTORY" name="JAVA_LIBRARY_PATH" value="C:\Program Files\Jaspersoft ETL\configuration\lib\java" show="false"/>
     <elementParameter field="CLOSED_LIST" name="LOGICAL_OP" value="&amp;&amp;"/>
     <elementParameter field="TABLE" name="CONDITIONS"/>
     <elementParameter field="CHECK" name="USE_ADVANCED" value="true"/>
@@ -214,8 +220,10 @@
       <column comment="" key="false" length="-1" name="Rate_pro_Monat" nullable="true" pattern="" precision="-1" sourceType="TEXT" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="Rate_pro_Quartal" nullable="true" pattern="" precision="-1" sourceType="TEXT" type="id_String" originalLength="1000" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="Rate_pro_Halbjahr" nullable="true" pattern="" precision="-1" sourceType="TEXT" type="id_String" originalLength="1000" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="false" length="-1" name="Rate_pro_Jahr" nullable="true" pattern="" precision="-1" sourceType="TEXT" type="id_String" originalLength="1000" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="false" length="-1" name="Zahlungsweise" nullable="true" pattern="" precision="-1" sourceType="TEXT" type="id_String" originalLength="1000" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Rate_pro_Jahr" nullable="true" pattern="" precision="-1" sourceType="TEXT" type="id_String" originalLength="1000" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Zahlungsweise" nullable="true" pattern="" precision="-1" sourceType="TEXT" type="id_String" originalLength="1000" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Load_DTS" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="-1" sourceType="DATETIME" type="id_Date" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Record_Source" nullable="true" pattern="" precision="-1" sourceType="TEXT" type="id_String" usefulColumn="true"/>
     </metadata>
     <metadata connector="FILTER" name="FILTER">
       <column comment="" key="false" length="-1" name="VNr" nullable="true" pattern="" precision="-1" sourceType="TEXT" type="id_String" usefulColumn="true"/>
@@ -230,6 +238,8 @@
       <column comment="" key="false" length="-1" name="Rate_pro_Halbjahr" nullable="true" pattern="" precision="-1" sourceType="TEXT" type="id_String" originalLength="1000" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="Rate_pro_Jahr" nullable="true" pattern="" precision="-1" sourceType="TEXT" type="id_String" originalLength="1000" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="Zahlungsweise" nullable="true" pattern="" precision="-1" sourceType="TEXT" type="id_String" originalLength="1000" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Load_DTS" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="-1" sourceType="DATETIME" type="id_Date" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Record_Source" nullable="true" pattern="" precision="-1" sourceType="TEXT" type="id_String" usefulColumn="true"/>
     </metadata>
     <metadata connector="REJECT" name="REJECT">
       <column comment="" key="false" length="-1" name="VNr" nullable="true" pattern="" precision="-1" sourceType="TEXT" type="id_String" usefulColumn="true"/>
@@ -242,14 +252,16 @@
       <column comment="" key="false" length="-1" name="Rate_pro_Monat" nullable="true" pattern="" precision="-1" sourceType="TEXT" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="Rate_pro_Quartal" nullable="true" pattern="" precision="-1" sourceType="TEXT" type="id_String" originalLength="1000" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="Rate_pro_Halbjahr" nullable="true" pattern="" precision="-1" sourceType="TEXT" type="id_String" originalLength="1000" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="false" length="-1" name="Rate_pro_Jahr" nullable="true" pattern="" precision="-1" sourceType="TEXT" type="id_String" originalLength="1000" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="false" length="-1" name="Zahlungsweise" nullable="true" pattern="" precision="-1" sourceType="TEXT" type="id_String" originalLength="1000" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Rate_pro_Jahr" nullable="true" pattern="" precision="-1" sourceType="TEXT" type="id_String" originalLength="1000" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Zahlungsweise" nullable="true" pattern="" precision="-1" sourceType="TEXT" type="id_String" originalLength="1000" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Load_DTS" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="-1" sourceType="DATETIME" type="id_Date" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Record_Source" nullable="true" pattern="" precision="-1" sourceType="TEXT" type="id_String" usefulColumn="true"/>
       <column key="false" length="255" name="errorMessage" nullable="true" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
     </metadata>
   </node>
   <node componentName="tMysqlOutput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="736" posY="256">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tMysqlOutput_2" show="false"/>
-    <elementParameter field="DIRECTORY" name="JAVA_LIBRARY_PATH" value="/data/dhome/Software/JaspersoftETL/configuration/lib/java" show="false"/>
+    <elementParameter field="DIRECTORY" name="JAVA_LIBRARY_PATH" value="C:\Program Files\Jaspersoft ETL\configuration\lib\java" show="false"/>
     <elementParameter field="CLOSED_LIST" name="DB_VERSION" value="MARIADB" show="false"/>
     <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="true"/>
     <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="tMysqlConnection_1"/>
@@ -339,6 +351,16 @@
       <elementValue elementRef="DELETE_KEY" value="false"/>
       <elementValue elementRef="UPDATABLE" value="true"/>
       <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Load_DTS"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Record_Source"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="errorMessage"/>
       <elementValue elementRef="UPDATE_KEY" value="false"/>
       <elementValue elementRef="DELETE_KEY" value="false"/>
@@ -364,8 +386,10 @@
       <column comment="" key="false" length="-1" name="Rate_pro_Monat" nullable="true" pattern="" precision="-1" sourceType="TEXT" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="Rate_pro_Quartal" nullable="true" pattern="" precision="-1" sourceType="TEXT" type="id_String" originalLength="1000" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="Rate_pro_Halbjahr" nullable="true" pattern="" precision="-1" sourceType="TEXT" type="id_String" originalLength="1000" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="false" length="-1" name="Rate_pro_Jahr" nullable="true" pattern="" precision="-1" sourceType="TEXT" type="id_String" originalLength="1000" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="false" length="-1" name="Zahlungsweise" nullable="true" pattern="" precision="-1" sourceType="TEXT" type="id_String" originalLength="1000" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Rate_pro_Jahr" nullable="true" pattern="" precision="-1" sourceType="TEXT" type="id_String" originalLength="1000" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Zahlungsweise" nullable="true" pattern="" precision="-1" sourceType="TEXT" type="id_String" originalLength="1000" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Load_DTS" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="-1" sourceType="DATETIME" type="id_Date" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Record_Source" nullable="true" pattern="" precision="-1" sourceType="TEXT" type="id_String" usefulColumn="true"/>
       <column key="false" length="255" name="errorMessage" nullable="true" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
     </metadata>
     <metadata connector="REJECT" name="REJECT">
@@ -379,15 +403,17 @@
       <column comment="" key="false" length="-1" name="Rate_pro_Monat" nullable="true" pattern="" precision="-1" sourceType="TEXT" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="Rate_pro_Quartal" nullable="true" pattern="" precision="-1" sourceType="TEXT" type="id_String" originalLength="1000" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="Rate_pro_Halbjahr" nullable="true" pattern="" precision="-1" sourceType="TEXT" type="id_String" originalLength="1000" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="false" length="-1" name="Rate_pro_Jahr" nullable="true" pattern="" precision="-1" sourceType="TEXT" type="id_String" originalLength="1000" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="false" length="-1" name="Zahlungsweise" nullable="true" pattern="" precision="-1" sourceType="TEXT" type="id_String" originalLength="1000" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Rate_pro_Jahr" nullable="true" pattern="" precision="-1" sourceType="TEXT" type="id_String" originalLength="1000" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Zahlungsweise" nullable="true" pattern="" precision="-1" sourceType="TEXT" type="id_String" originalLength="1000" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Load_DTS" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="-1" sourceType="DATETIME" type="id_Date" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Record_Source" nullable="true" pattern="" precision="-1" sourceType="TEXT" type="id_String" usefulColumn="true"/>
       <column defaultValue="" key="false" length="255" name="errorCode" nullable="true" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
       <column key="false" length="255" name="errorMessage" nullable="true" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
     </metadata>
   </node>
   <node componentName="tReplace" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="736" posY="64">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tReplace_1" show="false"/>
-    <elementParameter field="DIRECTORY" name="JAVA_LIBRARY_PATH" value="/data/dhome/Software/JaspersoftETL/configuration/lib/java" show="false"/>
+    <elementParameter field="DIRECTORY" name="JAVA_LIBRARY_PATH" value="C:\Program Files\Jaspersoft ETL\configuration\lib\java" show="false"/>
     <elementParameter field="CHECK" name="SIMPLE_MODE" value="false"/>
     <elementParameter field="LABEL" name="SIMPLEMODE_OLDLABLE" value="Simple mode works with regex expression(in last version)" show="false"/>
     <elementParameter field="TABLE" name="SUBSTITUTIONS" show="false"/>
@@ -425,11 +451,13 @@
       <column comment="" key="false" length="-1" name="Rate_pro_Halbjahr" nullable="true" pattern="" precision="-1" sourceType="TEXT" type="id_String" originalLength="1000" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="Rate_pro_Jahr" nullable="true" pattern="" precision="-1" sourceType="TEXT" type="id_String" originalLength="1000" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="Zahlungsweise" nullable="true" pattern="" precision="-1" sourceType="TEXT" type="id_String" originalLength="1000" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Load_DTS" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="-1" sourceType="DATETIME" type="id_Date" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Record_Source" nullable="true" pattern="" precision="-1" sourceType="TEXT" type="id_String" usefulColumn="true"/>
     </metadata>
   </node>
   <node componentName="tConvertType" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="864" posY="192">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tConvertType_1" show="false"/>
-    <elementParameter field="DIRECTORY" name="JAVA_LIBRARY_PATH" value="/data/dhome/Software/JaspersoftETL/configuration/lib/java" show="false"/>
+    <elementParameter field="DIRECTORY" name="JAVA_LIBRARY_PATH" value="C:\Program Files\Jaspersoft ETL\configuration\lib\java" show="false"/>
     <elementParameter field="CHECK" name="AUTOCAST" value="true"/>
     <elementParameter field="TABLE" name="MANUALTABLE" show="false"/>
     <elementParameter field="CHECK" name="EMPTYTONULL" value="false"/>
@@ -448,6 +476,8 @@
       <column comment="" key="false" length="-1" name="Rate_pro_Halbjahr" nullable="true" pattern="" precision="-1" sourceType="TEXT" type="id_Double" originalLength="1000" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="Rate_pro_Jahr" nullable="true" pattern="" precision="-1" sourceType="TEXT" type="id_Double" originalLength="1000" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="Zahlungsweise" nullable="true" pattern="" precision="-1" sourceType="TEXT" type="id_String" originalLength="1000" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Load_DTS" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="-1" sourceType="DATETIME" type="id_Date" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Record_Source" nullable="true" pattern="" precision="-1" sourceType="TEXT" type="id_String" usefulColumn="true"/>
     </metadata>
     <metadata connector="REJECT" name="REJECT">
       <column comment="" key="false" length="-1" name="VNr" nullable="true" pattern="" precision="-1" sourceType="TEXT" type="id_String" usefulColumn="true"/>
@@ -462,13 +492,15 @@
       <column comment="" key="false" length="-1" name="Rate_pro_Halbjahr" nullable="true" pattern="" precision="-1" sourceType="TEXT" type="id_Double" originalLength="1000" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="Rate_pro_Jahr" nullable="true" pattern="" precision="-1" sourceType="TEXT" type="id_Double" originalLength="1000" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="Zahlungsweise" nullable="true" pattern="" precision="-1" sourceType="TEXT" type="id_String" originalLength="1000" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Load_DTS" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="-1" sourceType="DATETIME" type="id_Date" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Record_Source" nullable="true" pattern="" precision="-1" sourceType="TEXT" type="id_String" usefulColumn="true"/>
       <column defaultValue="" key="false" length="255" name="errorCode" nullable="true" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
       <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
     </metadata>
   </node>
   <node componentName="tMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="992" posY="64">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tMap_1" show="false"/>
-    <elementParameter field="DIRECTORY" name="JAVA_LIBRARY_PATH" value="/data/dhome/Software/JaspersoftETL/configuration/lib/java" show="false"/>
+    <elementParameter field="DIRECTORY" name="JAVA_LIBRARY_PATH" value="C:\Program Files\Jaspersoft ETL\configuration\lib\java" show="false"/>
     <elementParameter field="EXTERNAL" name="MAP" value=""/>
     <elementParameter field="CLOSED_LIST" name="LINK_STYLE" value="AUTO"/>
     <elementParameter field="DIRECTORY" name="TEMPORARY_DATA_DIRECTORY" value=""/>
@@ -491,6 +523,8 @@
       <column comment="" key="false" length="-1" name="Rate_pro_Halbjahr" nullable="true" pattern="" precision="-1" sourceType="DOUBLE" type="id_Double" originalLength="1000" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="Rate_pro_Jahr" nullable="true" pattern="" precision="-1" sourceType="DOUBLE" type="id_Double" originalLength="1000" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="Zahlungsweise" nullable="true" pattern="" precision="-1" sourceType="TEXT" type="id_String" originalLength="1000" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Load_DTS" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="-1" sourceType="DATETIME" type="id_Date" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Record_Source" nullable="true" pattern="" precision="-1" sourceType="TEXT" type="id_String" usefulColumn="true"/>
     </metadata>
     <nodeData xsi:type="MapperData">
       <uiProperties/>
@@ -508,6 +542,8 @@
         <mapperTableEntries name="Rate_pro_Halbjahr" expression="row2.Rate_pro_Halbjahr" type="id_Double" nullable="true"/>
         <mapperTableEntries name="Rate_pro_Jahr" expression="row2.Rate_pro_Jahr" type="id_Double" nullable="true"/>
         <mapperTableEntries name="Zahlungsweise" expression="row2.Zahlungsweise" type="id_String" nullable="true"/>
+        <mapperTableEntries name="Load_DTS" expression="row2.Load_DTS " type="id_Date" nullable="true"/>
+        <mapperTableEntries name="Record_Source" expression="row2.Record_Source " type="id_String" nullable="true"/>
       </outputTables>
       <inputTables sizeState="INTERMEDIATE" name="row2" matchingMode="UNIQUE_MATCH" lookupMode="LOAD_ONCE">
         <mapperTableEntries name="VNr" type="id_String" nullable="true"/>
@@ -522,12 +558,14 @@
         <mapperTableEntries name="Rate_pro_Halbjahr" type="id_Double" nullable="true"/>
         <mapperTableEntries name="Rate_pro_Jahr" type="id_Double" nullable="true"/>
         <mapperTableEntries name="Zahlungsweise" type="id_String" nullable="true"/>
+        <mapperTableEntries name="Load_DTS" type="id_Date" nullable="true"/>
+        <mapperTableEntries name="Record_Source" type="id_String" nullable="true"/>
       </inputTables>
     </nodeData>
   </node>
   <node componentName="tMysqlOutput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="1120" posY="192">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tMysqlOutput_1" show="false"/>
-    <elementParameter field="DIRECTORY" name="JAVA_LIBRARY_PATH" value="/data/dhome/Software/JaspersoftETL/configuration/lib/java" show="false"/>
+    <elementParameter field="DIRECTORY" name="JAVA_LIBRARY_PATH" value="C:\Program Files\Jaspersoft ETL\configuration\lib\java" show="false"/>
     <elementParameter field="CLOSED_LIST" name="DB_VERSION" value="MARIADB" show="false"/>
     <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="true"/>
     <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="tMysqlConnection_1"/>
@@ -617,6 +655,16 @@
       <elementValue elementRef="DELETE_KEY" value="false"/>
       <elementValue elementRef="UPDATABLE" value="true"/>
       <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Load_DTS"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Record_Source"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
     </elementParameter>
     <elementParameter field="CHECK" name="USE_HINT_OPTIONS" value="false"/>
     <elementParameter field="TABLE" name="HINT_OPTIONS" show="false"/>
@@ -639,6 +687,8 @@
       <column comment="" key="false" length="-1" name="Rate_pro_Halbjahr" nullable="true" pattern="" precision="-1" sourceType="DOUBLE" type="id_Double" originalLength="1000" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="Rate_pro_Jahr" nullable="true" pattern="" precision="-1" sourceType="DOUBLE" type="id_Double" originalLength="1000" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="Zahlungsweise" nullable="true" pattern="" precision="-1" sourceType="TEXT" type="id_String" originalLength="1000" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Load_DTS" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="-1" sourceType="DATETIME" type="id_Date" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Record_Source" nullable="true" pattern="" precision="-1" sourceType="TEXT" type="id_String" usefulColumn="true"/>
     </metadata>
     <metadata connector="REJECT" name="REJECT">
       <column comment="" key="false" length="-1" name="VNr" nullable="true" pattern="" precision="-1" sourceType="TEXT" type="id_String" usefulColumn="true"/>
@@ -653,6 +703,8 @@
       <column comment="" key="false" length="-1" name="Rate_pro_Halbjahr" nullable="true" pattern="" precision="-1" sourceType="DOUBLE" type="id_Double" originalLength="1000" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="Rate_pro_Jahr" nullable="true" pattern="" precision="-1" sourceType="DOUBLE" type="id_Double" originalLength="1000" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="Zahlungsweise" nullable="true" pattern="" precision="-1" sourceType="TEXT" type="id_String" originalLength="1000" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Load_DTS" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="-1" sourceType="DATETIME" type="id_Date" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Record_Source" nullable="true" pattern="" precision="-1" sourceType="TEXT" type="id_String" usefulColumn="true"/>
       <column defaultValue="" key="false" length="255" name="errorCode" nullable="true" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
       <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
     </metadata>
@@ -699,6 +751,12 @@
       <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
       <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
       <elementValue elementRef="TRACE_COLUMN" value="Laufzeit"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="Record_Source"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="Load_DTS"/>
       <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
       <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
     </elementParameter>
@@ -821,6 +879,12 @@
       <elementValue elementRef="TRACE_COLUMN" value="Laufzeit"/>
       <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
       <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="Record_Source"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="Load_DTS"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
     </elementParameter>
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="row5" show="false"/>
@@ -863,6 +927,12 @@
       <elementValue elementRef="TRACE_COLUMN" value="Zahlungsweise"/>
       <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
       <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="Record_Source"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="Load_DTS"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
     </elementParameter>
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="row2" show="false"/>
@@ -903,6 +973,12 @@
       <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
       <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
       <elementValue elementRef="TRACE_COLUMN" value="Zahlungsweise"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="Record_Source"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="Load_DTS"/>
       <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
       <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
     </elementParameter>

@@ -106,9 +106,9 @@
   </parameters>
   <node componentName="tMysqlConnection" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="96" posY="64">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tMysqlConnection_1" show="false"/>
-    <elementParameter field="DIRECTORY" name="JAVA_LIBRARY_PATH" value="/data/dhome/Software/JaspersoftETL/configuration/lib/java" show="false"/>
+    <elementParameter field="DIRECTORY" name="JAVA_LIBRARY_PATH" value="C:\Program Files\Jaspersoft ETL\configuration\lib\java" show="false"/>
     <elementParameter field="CLOSED_LIST" name="DB_VERSION" value="MARIADB"/>
-    <elementParameter field="TEXT" name="HOST" value="&quot;192.168.57.250&quot;"/>
+    <elementParameter field="TEXT" name="HOST" value="&quot;localhost&quot;"/>
     <elementParameter field="TEXT" name="TYPE" value="MySQL" show="false"/>
     <elementParameter field="TEXT" name="PORT" value="&quot;3306&quot;"/>
     <elementParameter field="TEXT" name="DBNAME" value="&quot;database_project&quot;"/>
@@ -128,7 +128,7 @@
   </node>
   <node componentName="tMysqlInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="352" posY="64">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tMysqlInput_1" show="false"/>
-    <elementParameter field="DIRECTORY" name="JAVA_LIBRARY_PATH" value="/data/dhome/Software/JaspersoftETL/configuration/lib/java" show="false"/>
+    <elementParameter field="DIRECTORY" name="JAVA_LIBRARY_PATH" value="C:\Program Files\Jaspersoft ETL\configuration\lib\java" show="false"/>
     <elementParameter field="CLOSED_LIST" name="DB_VERSION" value="MYSQL_5" show="false"/>
     <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="true"/>
     <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="tMysqlConnection_1"/>
@@ -191,7 +191,7 @@
   </node>
   <node componentName="tFilterRow" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="512" posY="64">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tFilterRow_1" show="false"/>
-    <elementParameter field="DIRECTORY" name="JAVA_LIBRARY_PATH" value="/data/dhome/Software/JaspersoftETL/configuration/lib/java" show="false"/>
+    <elementParameter field="DIRECTORY" name="JAVA_LIBRARY_PATH" value="C:\Program Files\Jaspersoft ETL\configuration\lib\java" show="false"/>
     <elementParameter field="CLOSED_LIST" name="LOGICAL_OP" value="&amp;&amp;"/>
     <elementParameter field="TABLE" name="CONDITIONS"/>
     <elementParameter field="CHECK" name="USE_ADVANCED" value="true"/>
@@ -237,7 +237,7 @@
   </node>
   <node componentName="tMysqlOutput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="736" posY="224">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tMysqlOutput_2" show="false"/>
-    <elementParameter field="DIRECTORY" name="JAVA_LIBRARY_PATH" value="/data/dhome/Software/JaspersoftETL/configuration/lib/java" show="false"/>
+    <elementParameter field="DIRECTORY" name="JAVA_LIBRARY_PATH" value="C:\Program Files\Jaspersoft ETL\configuration\lib\java" show="false"/>
     <elementParameter field="CLOSED_LIST" name="DB_VERSION" value="MARIADB" show="false"/>
     <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="true"/>
     <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="tMysqlConnection_1"/>
@@ -361,7 +361,7 @@
   </node>
   <node componentName="tReplace" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="704" posY="64">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tReplace_1" show="false"/>
-    <elementParameter field="DIRECTORY" name="JAVA_LIBRARY_PATH" value="/data/dhome/Software/JaspersoftETL/configuration/lib/java" show="false"/>
+    <elementParameter field="DIRECTORY" name="JAVA_LIBRARY_PATH" value="C:\Program Files\Jaspersoft ETL\configuration\lib\java" show="false"/>
     <elementParameter field="CHECK" name="SIMPLE_MODE" value="true"/>
     <elementParameter field="LABEL" name="SIMPLEMODE_OLDLABLE" value="Simple mode works with regex expression(in last version)" show="false"/>
     <elementParameter field="TABLE" name="SUBSTITUTIONS"/>
@@ -405,7 +405,7 @@
   </node>
   <node componentName="tConvertType" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="832" posY="64">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tConvertType_1" show="false"/>
-    <elementParameter field="DIRECTORY" name="JAVA_LIBRARY_PATH" value="/data/dhome/Software/JaspersoftETL/configuration/lib/java" show="false"/>
+    <elementParameter field="DIRECTORY" name="JAVA_LIBRARY_PATH" value="C:\Program Files\Jaspersoft ETL\configuration\lib\java" show="false"/>
     <elementParameter field="CHECK" name="AUTOCAST" value="true"/>
     <elementParameter field="TABLE" name="MANUALTABLE" show="false"/>
     <elementParameter field="CHECK" name="EMPTYTONULL" value="false"/>
@@ -440,7 +440,7 @@
   </node>
   <node componentName="tMysqlOutput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="1088" posY="64">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tMysqlOutput_1" show="false"/>
-    <elementParameter field="DIRECTORY" name="JAVA_LIBRARY_PATH" value="/data/dhome/Software/JaspersoftETL/configuration/lib/java" show="false"/>
+    <elementParameter field="DIRECTORY" name="JAVA_LIBRARY_PATH" value="C:\Program Files\Jaspersoft ETL\configuration\lib\java" show="false"/>
     <elementParameter field="CLOSED_LIST" name="DB_VERSION" value="MARIADB" show="false"/>
     <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="true"/>
     <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="tMysqlConnection_1"/>
@@ -558,7 +558,7 @@
   </node>
   <node componentName="tMysqlInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="352" posY="352">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tMysqlInput_2" show="false"/>
-    <elementParameter field="DIRECTORY" name="JAVA_LIBRARY_PATH" value="/data/dhome/Software/JaspersoftETL/configuration/lib/java" show="false"/>
+    <elementParameter field="DIRECTORY" name="JAVA_LIBRARY_PATH" value="C:\Program Files\Jaspersoft ETL\configuration\lib\java" show="false"/>
     <elementParameter field="CLOSED_LIST" name="DB_VERSION" value="MYSQL_5" show="false"/>
     <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="true"/>
     <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="tMysqlConnection_1"/>
@@ -624,7 +624,7 @@
   </node>
   <node componentName="tMysqlOutput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="736" posY="352">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tMysqlOutput_3" show="false"/>
-    <elementParameter field="DIRECTORY" name="JAVA_LIBRARY_PATH" value="/data/dhome/Software/JaspersoftETL/configuration/lib/java" show="false"/>
+    <elementParameter field="DIRECTORY" name="JAVA_LIBRARY_PATH" value="C:\Program Files\Jaspersoft ETL\configuration\lib\java" show="false"/>
     <elementParameter field="CLOSED_LIST" name="DB_VERSION" value="MARIADB" show="false"/>
     <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="true"/>
     <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="tMysqlConnection_1"/>
