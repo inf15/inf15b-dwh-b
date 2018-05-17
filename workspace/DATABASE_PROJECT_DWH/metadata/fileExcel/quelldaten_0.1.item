@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:TalendMetadata="http://www.talend.org/metadata/connection/2010" xmlns:orgomg.cwm.resource.record="http:///orgomg/cwm/resource/record.ecore">
-  <TalendMetadata:FileExcelConnection xmi:id="_1DY1wDv8Eei-bN4jzXvOuw" name="quelldaten" dataPackage="_1DY1wTv8Eei-bN4jzXvOuw" Server="Localhost 127.0.0.1" FilePath="/home/sascha/Prog/Workspaces/dhbw/inf15b-dwh-b/quelldaten/DHBW Mosbach Versicherungen B.xlsx" Encoding="UTF-8" UseHeader="true" HeaderValue="2" FirstLineCaption="true" SheetName="KFZ" firstColumn="1" thousandSeparator="','" decimalSeparator="'.'" selectAllSheets="true" sheetList="KFZ:w&#xA;Sach:w&#xA;BU:w&#xA;KV:w&#xA;LV:w&#xA;Stammdaten:w&#xA;">
+  <TalendMetadata:FileExcelConnection xmi:id="_1DY1wDv8Eei-bN4jzXvOuw" name="quelldaten" dataPackage="_1DY1wTv8Eei-bN4jzXvOuw" Server="Localhost 127.0.0.1" FilePath="/home/privat/Nextcloud/Dokumente/DHBW/Datenbanken II/Praxis/Rohdaten/DHBW Mosbach Versicherungen B.xlsx" Encoding="UTF-8" UseHeader="true" HeaderValue="2" FirstLineCaption="true" SheetName="KFZ" firstColumn="1" thousandSeparator="','" decimalSeparator="'.'" selectAllSheets="true" sheetList="KFZ:w&#xA;Sach:w&#xA;BU:w&#xA;KV:w&#xA;LV:w&#xA;Stammdaten:w&#xA;" generationMode="USER_MODE">
     <sheetColumns>A</sheetColumns>
     <sheetColumns>B</sheetColumns>
     <sheetColumns>C</sheetColumns>
