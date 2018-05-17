@@ -440,6 +440,10 @@
       <elementValue elementRef="SEARCH_COLUMN" value="&quot;\\,&quot;"/>
       <elementValue elementRef="REPLACE_COLUMN" value="&quot;.&quot;"/>
       <elementValue elementRef="COMMENT" value=""/>
+      <elementValue elementRef="INPUT_COLUMN" value="Wertfaktor"/>
+      <elementValue elementRef="SEARCH_COLUMN" value="&quot;\\,&quot;"/>
+      <elementValue elementRef="REPLACE_COLUMN" value="&quot;.&quot;"/>
+      <elementValue elementRef="COMMENT" value=""/>
     </elementParameter>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tReplace_1">
@@ -664,7 +668,7 @@
     <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" value="" show="false"/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
     <elementParameter field="GUESS_SCHEMA" name="GUESS_SCHEMA" value="&quot;&quot;"/>
-    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;SELECT &#xA;  `LV`.`VNr`, &#xA;  `LV`.`KuNr`, &#xA;  `LV`.`Wertfaktor`, &#xA;  `LV`.`VBeginn`, &#xA;  `LV`.`Laufzeit`, &#xA;  `LV`.`Rate_pro_Monat`, &#xA;  `LV`.`Rate_pro_Quartal`, &#xA;  `LV`.`Rate_pro_Halbjahr`, &#xA;  `LV`.`Rate_pro_Jahr`, &#xA;  `LV`.`Beguenstigter`, &#xA;  `LV`.`BU`, &#xA;  `LV`.`Zahlungsweise`, &#xA;  `LV`.`errorMessage`, &#xA;  `LV`.`Load_DTS`, &#xA;  `LV`.`Record_Source`&#xA;FROM `LV`&#xD;&#xA;WHERE VNr IN (&#xD;&#xA;&#x9;SELECT VNr FROM LV &#xD;&#xA;&#x9;GROUP BY VNr HAVING COUNT(VNr) > 1&#xD;&#xA;);&quot;"/>
+    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;SELECT &#xA;  `LV`.`VNr`, &#xA;  `LV`.`KuNr`, &#xA;  `LV`.`Wertfaktor`, &#xA;  `LV`.`VBeginn`, &#xA;  `LV`.`Laufzeit`, &#xA;  `LV`.`Rate_pro_Monat`, &#xA;  `LV`.`Rate_pro_Quartal`, &#xA;  `LV`.`Rate_pro_Halbjahr`, &#xA;  `LV`.`Rate_pro_Jahr`, &#xA;  `LV`.`Beguenstigter`, &#xA;  `LV`.`BU`, &#xA;  `LV`.`Zahlungsweise`, &#xA;  `LV`.`Load_DTS`, &#xA;  `LV`.`Record_Source`&#xA;FROM `LV`&#xD;&#xA;WHERE VNr IN (&#xD;&#xA;&#x9;SELECT VNr FROM LV &#xD;&#xA;&#x9;GROUP BY VNr HAVING COUNT(VNr) > 1&#xD;&#xA;);&quot;"/>
     <elementParameter field="LABEL" name="NOTE" value="This option only applies when deploying and running in the Talend Runtime" show="false"/>
     <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" value="false" show="false"/>
     <elementParameter field="TEXT" name="DATASOURCE_ALIAS" value="&quot;&quot;" show="false"/>
@@ -699,8 +703,6 @@
       <elementValue elementRef="TRIM" value="false"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="Zahlungsweise"/>
       <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="errorMessage"/>
-      <elementValue elementRef="TRIM" value="false"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="Load_DTS"/>
       <elementValue elementRef="TRIM" value="false"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="Record_Source"/>
@@ -720,7 +722,6 @@
       <column comment="" key="false" length="-1" name="Beguenstigter" nullable="true" pattern="" precision="-1" sourceType="TEXT" type="id_String" originalLength="1000" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="BU" nullable="true" pattern="" precision="-1" sourceType="TEXT" type="id_String" originalLength="1000" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="Zahlungsweise" nullable="true" pattern="" precision="-1" sourceType="TEXT" type="id_String" originalLength="1000" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="errorMessage" nullable="true" pattern="" precision="-1" sourceType="TEXT" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="Load_DTS" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="-1" sourceType="DATETIME" type="id_Date" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="Record_Source" nullable="true" pattern="" precision="-1" sourceType="TEXT" type="id_String" usefulColumn="true"/>
     </metadata>
@@ -817,11 +818,6 @@
       <elementValue elementRef="DELETE_KEY" value="false"/>
       <elementValue elementRef="UPDATABLE" value="true"/>
       <elementValue elementRef="INSERTABLE" value="true"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="errorMessage"/>
-      <elementValue elementRef="UPDATE_KEY" value="false"/>
-      <elementValue elementRef="DELETE_KEY" value="false"/>
-      <elementValue elementRef="UPDATABLE" value="true"/>
-      <elementValue elementRef="INSERTABLE" value="true"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="Load_DTS"/>
       <elementValue elementRef="UPDATE_KEY" value="false"/>
       <elementValue elementRef="DELETE_KEY" value="false"/>
@@ -854,7 +850,6 @@
       <column comment="" key="false" length="-1" name="Beguenstigter" nullable="true" pattern="" precision="-1" sourceType="TEXT" type="id_String" originalLength="1000" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="BU" nullable="true" pattern="" precision="-1" sourceType="TEXT" type="id_String" originalLength="1000" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="Zahlungsweise" nullable="true" pattern="" precision="-1" sourceType="TEXT" type="id_String" originalLength="1000" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="errorMessage" nullable="true" pattern="" precision="-1" sourceType="TEXT" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="Load_DTS" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="-1" sourceType="DATETIME" type="id_Date" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="Record_Source" nullable="true" pattern="" precision="-1" sourceType="TEXT" type="id_String" usefulColumn="true"/>
     </metadata>
