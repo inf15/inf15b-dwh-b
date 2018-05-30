@@ -176,7 +176,7 @@
       <column comment="" key="false" length="65535" name="KuNr" nullable="true" pattern="" precision="0" sourceType="TEXT" type="id_String" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
-      <column comment="" key="false" length="22" name="Wertfaktor" nullable="true" pattern="" precision="0" sourceType="DOUBLE" type="id_Double" usefulColumn="true">
+      <column comment="" key="false" length="-1" name="Wertfaktor" nullable="true" pattern="" precision="-1" sourceType="DOUBLE" type="id_Double" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
       <column comment="" key="false" length="65535" name="VBeginn" nullable="true" pattern="" precision="0" sourceType="TEXT" type="id_String" usefulColumn="true">
@@ -235,7 +235,7 @@
     <metadata connector="FLOW" name="CDWH_S_LV_Vertragsbedingungen">
       <column comment="" key="true" length="80" name="LVBedHash" nullable="false" pattern="" precision="-1" sourceType="" type="id_String" originalLength="80" usefulColumn="true"/>
       <column comment="" key="false" length="80" name="LVHash" nullable="false" pattern="" precision="-1" sourceType="" type="id_String" originalLength="80" usefulColumn="true"/>
-      <column comment="" key="false" length="42" name="Wertfaktor" nullable="true" pattern="" precision="0" sourceType="DOUBLE" type="id_Double" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Wertfaktor" nullable="true" pattern="" precision="-1" sourceType="DOUBLE" type="id_Double" usefulColumn="true"/>
       <column comment="" key="false" length="100" name="VBeginn" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="100" name="Beguenstigter" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="19" name="Load_DTS" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="VARCHAR" type="id_Date" usefulColumn="true"/>
@@ -481,7 +481,7 @@
     <metadata connector="FLOW" name="tMysqlOutput_2">
       <column comment="" key="true" length="80" name="LVBedHash" nullable="false" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" originalLength="80" usefulColumn="true"/>
       <column comment="" key="false" length="80" name="LVHash" nullable="false" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" originalLength="80" usefulColumn="true"/>
-      <column comment="" key="false" length="42" name="Wertfaktor" nullable="true" pattern="" precision="0" sourceType="DOUBLE" type="id_Double" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Wertfaktor" nullable="true" pattern="" precision="-1" sourceType="DOUBLE" type="id_Double" usefulColumn="true"/>
       <column comment="" key="false" length="100" name="VBeginn" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="100" name="Beguenstigter" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="19" name="Load_DTS" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="DATETIME" type="id_Date" usefulColumn="true"/>
@@ -490,7 +490,7 @@
     <metadata connector="REJECT" name="REJECT">
       <column comment="" key="true" length="80" name="LVBedHash" nullable="false" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" originalLength="80" usefulColumn="true"/>
       <column comment="" key="false" length="80" name="LVHash" nullable="false" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" originalLength="80" usefulColumn="true"/>
-      <column comment="" key="false" length="42" name="Wertfaktor" nullable="true" pattern="" precision="0" sourceType="DOUBLE" type="id_Double" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Wertfaktor" nullable="true" pattern="" precision="-1" sourceType="DOUBLE" type="id_Double" usefulColumn="true"/>
       <column comment="" key="false" length="100" name="VBeginn" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="100" name="Beguenstigter" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="19" name="Load_DTS" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="DATETIME" type="id_Date" usefulColumn="true"/>

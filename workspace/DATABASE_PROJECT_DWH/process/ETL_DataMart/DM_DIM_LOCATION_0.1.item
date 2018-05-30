@@ -153,7 +153,55 @@
       <column comment="" key="false" length="80" name="HashKey" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" originalLength="80" usefulColumn="true"/>
       <column comment="" key="false" length="65535" name="Ort" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" originalLength="65535" usefulColumn="true"/>
       <column comment="" key="false" length="65535" name="PLZ" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" originalLength="65535" usefulColumn="true"/>
-      <column comment="" key="false" length="50" name="Load_DTS" nullable="true" pattern="" precision="19" sourceType="VARCHAR" type="id_String" originalLength="50" usefulColumn="true"/>
+      <column comment="" key="false" length="19" name="Load_DTS" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="DATETIME" type="id_Date" originalLength="50" usefulColumn="true"/>
+      <column comment="" key="false" length="65535" name="Record_Source" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" originalLength="50" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="tUniqRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="320" posY="64">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tUniqRow_1" show="false"/>
+    <elementParameter field="DIRECTORY" name="JAVA_LIBRARY_PATH" value="/opt/JETLXCmmty/configuration/lib/java" show="false"/>
+    <elementParameter field="TABLE" name="UNIQUE_KEY">
+      <elementValue elementRef="SCHEMA_COLUMN" value="HashKey"/>
+      <elementValue elementRef="KEY_ATTRIBUTE" value="false"/>
+      <elementValue elementRef="CASE_SENSITIVE" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Ort"/>
+      <elementValue elementRef="KEY_ATTRIBUTE" value="true"/>
+      <elementValue elementRef="CASE_SENSITIVE" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="PLZ"/>
+      <elementValue elementRef="KEY_ATTRIBUTE" value="true"/>
+      <elementValue elementRef="CASE_SENSITIVE" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Load_DTS"/>
+      <elementValue elementRef="KEY_ATTRIBUTE" value="false"/>
+      <elementValue elementRef="CASE_SENSITIVE" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Record_Source"/>
+      <elementValue elementRef="KEY_ATTRIBUTE" value="false"/>
+      <elementValue elementRef="CASE_SENSITIVE" value="false"/>
+    </elementParameter>
+    <elementParameter field="CHECK" name="ONLY_ONCE_EACH_DUPLICATED_KEY" value="false"/>
+    <elementParameter field="CHECK" name="IS_VIRTUAL_COMPONENT" value="false"/>
+    <elementParameter field="OPENED_LIST" name="BUFFER_SIZE" value="M" show="false"/>
+    <elementParameter field="DIRECTORY" name="TEMP_DIRECTORY" value="" show="false"/>
+    <elementParameter field="CHECK" name="CHANGE_HASH_AND_EQUALS_FOR_BIGDECIMAL" value="false"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" label="IntegrationZone_Sach" name="tUniqRow_1">
+      <column comment="" key="false" length="80" name="HashKey" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" originalLength="80" usefulColumn="true"/>
+      <column comment="" key="false" length="65535" name="Ort" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" originalLength="65535" usefulColumn="true"/>
+      <column comment="" key="false" length="65535" name="PLZ" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" originalLength="65535" usefulColumn="true"/>
+      <column comment="" key="false" length="19" name="Load_DTS" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="DATETIME" type="id_Date" originalLength="50" usefulColumn="true"/>
+      <column comment="" key="false" length="65535" name="Record_Source" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" originalLength="50" usefulColumn="true"/>
+    </metadata>
+    <metadata connector="UNIQUE" label="IntegrationZone_Sach" name="UNIQUE">
+      <column comment="" key="false" length="80" name="HashKey" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" originalLength="80" usefulColumn="true"/>
+      <column comment="" key="false" length="65535" name="Ort" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" originalLength="65535" usefulColumn="true"/>
+      <column comment="" key="false" length="65535" name="PLZ" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" originalLength="65535" usefulColumn="true"/>
+      <column comment="" key="false" length="19" name="Load_DTS" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="DATETIME" type="id_Date" originalLength="50" usefulColumn="true"/>
+      <column comment="" key="false" length="65535" name="Record_Source" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" originalLength="50" usefulColumn="true"/>
+    </metadata>
+    <metadata connector="DUPLICATE" label="IntegrationZone_Sach" name="DUPLICATE">
+      <column comment="" key="false" length="80" name="HashKey" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" originalLength="80" usefulColumn="true"/>
+      <column comment="" key="false" length="65535" name="Ort" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" originalLength="65535" usefulColumn="true"/>
+      <column comment="" key="false" length="65535" name="PLZ" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" originalLength="65535" usefulColumn="true"/>
+      <column comment="" key="false" length="19" name="Load_DTS" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="DATETIME" type="id_Date" originalLength="50" usefulColumn="true"/>
       <column comment="" key="false" length="65535" name="Record_Source" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" originalLength="50" usefulColumn="true"/>
     </metadata>
   </node>
@@ -229,20 +277,20 @@
       <column comment="" key="false" length="80" name="HashKey" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" originalLength="80" usefulColumn="true"/>
       <column comment="" key="false" length="65535" name="Ort" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" originalLength="65535" usefulColumn="true"/>
       <column comment="" key="false" length="65535" name="PLZ" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" originalLength="65535" usefulColumn="true"/>
-      <column comment="" key="false" length="50" name="Load_DTS" nullable="true" pattern="" precision="19" sourceType="VARCHAR" type="id_String" originalLength="50" usefulColumn="true"/>
+      <column comment="" key="false" length="19" name="Load_DTS" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="DATETIME" type="id_Date" originalLength="50" usefulColumn="true"/>
       <column comment="" key="false" length="65535" name="Record_Source" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" originalLength="50" usefulColumn="true"/>
     </metadata>
     <metadata connector="REJECT" label="IntegrationZone_Sach" name="REJECT">
       <column comment="" key="false" length="80" name="HashKey" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" originalLength="80" usefulColumn="true"/>
       <column comment="" key="false" length="65535" name="Ort" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" originalLength="65535" usefulColumn="true"/>
       <column comment="" key="false" length="65535" name="PLZ" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" originalLength="65535" usefulColumn="true"/>
-      <column comment="" key="false" length="50" name="Load_DTS" nullable="true" pattern="" precision="19" sourceType="VARCHAR" type="id_String" originalLength="50" usefulColumn="true"/>
+      <column comment="" key="false" length="19" name="Load_DTS" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="DATETIME" type="id_Date" originalLength="50" usefulColumn="true"/>
       <column comment="" key="false" length="65535" name="Record_Source" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" originalLength="50" usefulColumn="true"/>
       <column defaultValue="" key="false" length="255" name="errorCode" nullable="true" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
       <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
     </metadata>
   </node>
-  <connection connectorName="FLOW" label="row1" lineStyle="0" metaname="tMysqlInput_1" offsetLabelX="0" offsetLabelY="0" source="tMysqlInput_1" target="tMysqlOutput_1">
+  <connection connectorName="FLOW" label="row1" lineStyle="0" metaname="tMysqlInput_1" offsetLabelX="0" offsetLabelY="0" source="tMysqlInput_1" target="tUniqRow_1">
     <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER" show="false">
       <elementValue elementRef="TRACE_COLUMN" value="HashKey"/>
       <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
@@ -253,15 +301,36 @@
       <elementValue elementRef="TRACE_COLUMN" value="PLZ"/>
       <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
       <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
-      <elementValue elementRef="TRACE_COLUMN" value="Record_Source"/>
+      <elementValue elementRef="TRACE_COLUMN" value="Load_DTS"/>
       <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
       <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
-      <elementValue elementRef="TRACE_COLUMN" value="Load_DTS"/>
+      <elementValue elementRef="TRACE_COLUMN" value="Record_Source"/>
       <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
       <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
     </elementParameter>
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="row1" show="false"/>
+  </connection>
+  <connection connectorName="UNIQUE" label="row2" lineStyle="0" metaname="tUniqRow_1" offsetLabelX="0" offsetLabelY="0" source="tUniqRow_1" target="tMysqlOutput_1">
+    <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER" show="false">
+      <elementValue elementRef="TRACE_COLUMN" value="HashKey"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="Ort"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="PLZ"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="Load_DTS"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="Record_Source"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+    </elementParameter>
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="row2" show="false"/>
   </connection>
   <subjob>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tMysqlInput_1" show="false"/>

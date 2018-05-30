@@ -136,9 +136,9 @@
     <elementParameter field="CHECK" name="ENABLE_STREAM" value="false"/>
     <elementParameter field="CHECK" name="TRIM_ALL_COLUMN" value="false"/>
     <elementParameter field="TABLE" name="TRIM_COLUMN">
-      <elementValue elementRef="SCHEMA_COLUMN" value="VNr"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="BuNr"/>
       <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="VNr1"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="LvNr"/>
       <elementValue elementRef="TRIM" value="false"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="KuNr"/>
       <elementValue elementRef="TRIM" value="false"/>
@@ -146,9 +146,9 @@
     <elementParameter field="TEXT" name="LABEL" value="database_project"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tMysqlInput_1">
-      <column comment="" key="false" length="65535" name="VNr" nullable="true" pattern="" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="65535" name="VNr1" nullable="true" originalDbColumnName="VNr" pattern="" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="65535" name="KuNr" nullable="true" pattern="" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="65535" name="BuNr" nullable="true" pattern="" precision="7" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="65535" name="LvNr" nullable="true" pattern="" precision="7" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="65535" name="KuNr" nullable="true" pattern="" precision="6" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
     </metadata>
   </node>
   <node componentName="tMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="352" posY="128">
@@ -173,10 +173,10 @@
     <nodeData xsi:type="MapperData">
       <uiProperties/>
       <varTables sizeState="INTERMEDIATE" name="Var">
-        <mapperTableEntries name="LinkHash" expression="Hash.sha1(row1.VNr1 + &quot;~&quot; + row1.KuNr)" type="id_String"/>
+        <mapperTableEntries name="LinkHash" expression="Hash.sha1(row1.LvNr + &quot;~&quot; + row1.KuNr)" type="id_String"/>
         <mapperTableEntries name="KundeHash" expression="Hash.sha1(row1.KuNr)" type="id_String"/>
-        <mapperTableEntries name="LvHash" expression="Hash.sha1(row1.VNr1)" type="id_String"/>
-        <mapperTableEntries name="BuHash" expression="Hash.sha1(row1.VNr)" type="id_String"/>
+        <mapperTableEntries name="LvHash" expression="Hash.sha1(row1.LvNr)" type="id_String"/>
+        <mapperTableEntries name="BuHash" expression="Hash.sha1(row1.BuNr)" type="id_String"/>
         <mapperTableEntries name="Source" expression="&quot;IZ_LV LEFT JOIN IZ_BU ON KuNr = KuNr&quot;" type="id_String"/>
       </varTables>
       <outputTables sizeState="INTERMEDIATE" name="CDWH_L_LV_BU_Kunde">
@@ -187,8 +187,8 @@
         <mapperTableEntries name="Source" expression="Var.Source " type="id_String"/>
       </outputTables>
       <inputTables sizeState="INTERMEDIATE" name="row1" matchingMode="UNIQUE_MATCH" lookupMode="LOAD_ONCE">
-        <mapperTableEntries name="VNr" type="id_String" nullable="true"/>
-        <mapperTableEntries name="VNr1" type="id_String" nullable="true"/>
+        <mapperTableEntries name="BuNr" type="id_String" nullable="true"/>
+        <mapperTableEntries name="LvNr" type="id_String" nullable="true"/>
         <mapperTableEntries name="KuNr" type="id_String" nullable="true"/>
       </inputTables>
     </nodeData>
